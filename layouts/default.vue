@@ -48,6 +48,14 @@ a:hover {
   text-decoration: inherit;
 }
 
+p a:hover {
+  text-decoration: underline;
+}
+
+p a {
+  color: #0D4EFF;
+}
+
 .section {
   margin-bottom: 30px;
 }

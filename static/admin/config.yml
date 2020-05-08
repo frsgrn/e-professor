@@ -26,7 +26,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "date", format: "Do MMM YYYY", required: true}
       - {label: "Author", name: "author", widget: "string", required: true}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Subject", widget: "relation", name: "subject", collection: "subject", searchFields: ["name", "description"], valueField: "name", displayFields: ["name"]}
+      - {label: "Subject", widget: "relation", name: "subject", collection: "subject", searchFields: ["name", "description"], valueField: "{{slug}}", displayFields: ["name"]}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
     folder: "content/pages" # The path to the folder where the documents are stored
