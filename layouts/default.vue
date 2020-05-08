@@ -1,124 +1,82 @@
 <template>
-  <div class="layout">
-    <div class="header">
-      <!-- This link is an n-link because it links to another Nuxt route -->
-      <n-link class="logo" to="/"><Logo/></n-link>
-    </div>
-    <nuxt class="content" />
-    <div class="footer">
-      <p>
-        <!-- This is not an n-link because the NetlifyCMS admin page is static.
-        If you make it an n-link, you'll get a "Page could not be found" when
-        you click it. -->
-        <a href="/admin">
-          NetlifyCMS Admin Login
-       </a>
-     </p>
-    </div>
+  <div>
+    <navbar></navbar>
+    <nuxt />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import Navbar from '@/components/Navbar'
 export default {
   components: {
-    Logo,
+    Navbar
   }
 }
 </script>
 
 <style>
-.layout {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100vh;
-  padding: 40px 20px 10px 20px;
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Merriweather&family=Merriweather+Sans&family=Nunito&family=Nunito+Sans&family=Quattrocento&family=Quattrocento+Sans&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Eczar&family=Gentium+Basic&family=Libre+Baskerville:wght@400;700&family=Libre+Franklin&family=Proza+Libre&family=Rubik&family=Taviraj&family=Trirong&family=Work+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman';
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.content {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.headline {
+  font-weight: bold;
+  font-size: 3.3em;
+  margin-bottom: 0px;
 }
 
-.footer {
-  background-color: whitesmoke;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.footer > * {
-  padding: 20px;
+p {
+  font-size: 20px;
 }
 
-.logo {
-  display: block;
-  margin: 0;
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+#subject-menu {
   padding: 0;
+  list-style-type: none;
 }
 
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+#subject-menu li{
+  display: inline;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-a:link {
-  color: #41b883;
-}
-
-a:visited {
-  color: #3b8070;
-}
-
-.button--green {
+.subject-preview {
   display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+  margin: 10px;
+  margin-left: 0px;
+  margin-right: 20px;
+  padding: 10px;
+  border: 2px solid #eee;
+  border-radius: 5px;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.subject-preview * {
+  margin: 0px;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.body img {
+  width: 100%;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
 </style>

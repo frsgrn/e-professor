@@ -52,6 +52,8 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/axios', // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/pwa',
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/dotenv'
   ],
   markdownit: {
     injected: true,

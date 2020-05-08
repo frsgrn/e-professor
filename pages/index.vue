@@ -1,4 +1,4 @@
-<template lang="html">
+<!---<template lang="html">
   <div class="main">
     <div class="main-header">
       <h1>{{siteInfo.sitename}}</h1>
@@ -9,10 +9,40 @@
       <p class="post-link" v-for="post in blogPosts"><n-link :to="post._path">{{post.title}}</n-link></p>
     </div>
   </div>
+</template>-->
+
+<template>
+  <div class="container">
+    <hero title="e-professor" subheadline="undertitel bla bla"></hero>
+    <!---<div class="section">
+      <h4>Ämnen</h4>
+      <ul id="subject-menu">
+        <li v-for="subject in subjects" :key="subject.id">
+          <nuxt-link :to="'/subject/' + subject.id">
+          <div class="subject-preview">
+            <h4>{{subject.name}}</h4>
+            <p>{{subject.description}}</p>
+          </div>
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>-->
+    <div class="section" style="">
+      <h4>Senaste inlägg</h4>
+      <article-preview :posts="blogPosts"></article-preview>
+    </div>
+  </div>
 </template>
 
+
 <script>
+
+import ArticlePreview from '~/components/ArticlePreview.vue'
+
 export default {
+  components: {
+    ArticlePreview
+  },
   computed: {
     blogPosts() {
       return this.$store.state.blogPosts;
