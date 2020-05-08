@@ -35,6 +35,11 @@ export default {
     let posts = await getPosts()
     let subjects = await getSubjects()
     return {posts, subjects}
+  },
+  head() {
+    return {
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+    };
   }
 }
 </script>
