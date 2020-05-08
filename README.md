@@ -1,22 +1,13 @@
-# frontend
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tylermercer/nuxt-netlifycms-boilerplate)
 
-> My polished Nuxt.js project
+Live demo [here](https://nuxt-netlifycms-boilerplate.netlify.com/).
 
-## Build Setup
+I wanted to build a website with [NetlifyCMS](https://www.netlifycms.org/) and [Nuxt](https://nuxtjs.org/) but couldn't find any simple, well-documented templates that worked with the latest version of Nuxt, so I built my own! I hope you find it useful. 🙂
 
-```bash
-# install dependencies
-$ npm install
+Many thanks to [Jake 101](https://jake101.com/), whose [Bael Template](https://github.com/jake-101/bael-template) served as a useful reference point as I built this.
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+**To-Do:**
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+* Add examples for the "Page" content type
+* Add an example of using dynamic layouts in Nuxt, e.g. a dedicated layout for mobile
+* Add an example of using Netlify-enabled forms

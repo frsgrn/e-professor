@@ -24,3 +24,14 @@ export const getSubject = async (id) => {
     console.log(subject)
     return subject.data    
 }
+
+export const getBlogPosts = async () => {
+    const context = await require.context('~/assets/content/blog/', false, /\.json$/);
+    console.log(context)
+    const searchposts = await context.keys().map(key => ({
+      ...context(key),
+      _path: `/blog/${key.replace('.json', '').replace('./', '')}`
+    }));
+
+    return searchposts.reverse()
+}
