@@ -13,7 +13,7 @@
 
 <template>
   <div class="container">
-    <hero title="e-professor" subheadline="undertitel bla bla"></hero>
+    <hero :title="siteInfo.sitename" :subheadline="siteInfo.sitedescription"></hero>
     <!---<div class="section">
       <h4>Ämnen</h4>
       <ul id="subject-menu">
