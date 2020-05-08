@@ -38,10 +38,11 @@
 <script>
 
 import ArticlePreview from '~/components/ArticlePreview.vue'
+import Hero from '~/components/Hero.vue'
 
 export default {
   components: {
-    ArticlePreview
+    ArticlePreview, Hero
   },
   computed: {
     blogPosts() {

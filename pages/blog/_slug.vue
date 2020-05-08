@@ -18,6 +18,7 @@ export default {
   },
   async asyncData({ params, app, payload, route, store }) {
     let post = await import(`~/content/blog/${params.slug}.json`);
+    console.log(post)
     return {
       post
     };

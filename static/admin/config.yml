@@ -4,6 +4,15 @@ backend:
 media_folder: "static/images/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "/images/uploads"
 collections:
+  - name: "subject"
+    label: "Subject"
+    folder: "content/subject"
+    create: true
+    slug: "{{slug}}"
+    format: 'json'
+    fields:
+      - {label: "Name", name: "name", widget: "string", required: true}
+      - {label: "Description", name: "description", widget: "string", required: false}
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "content/blog" # The path to the folder where the documents are stored
@@ -17,6 +26,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "date", format: "Do MMM YYYY", required: true}
       - {label: "Author", name: "author", widget: "string", required: true}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Subject", widget: "relation", name: "subject", collection: "subject", searchFields: ["name", "description"], valueField: "name", displayFields: ["name"]}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
     folder: "content/pages" # The path to the folder where the documents are stored
