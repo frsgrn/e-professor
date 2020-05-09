@@ -50,6 +50,9 @@ export default {
     },
     siteInfo() {
       return this.$store.state.siteInfo;
+    },
+    subjects() {
+      return this.$store.state.subjects
     }
   }
 }

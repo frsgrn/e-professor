@@ -20,22 +20,26 @@ export default {
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Times New Roman';
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
 }
 
 .headline {
-  font-weight: bold;
   font-size: 3.3em;
   margin-bottom: 0px;
 }
 
 p {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
+  background-color: #eff0f7;
 }
 
 a {
@@ -64,6 +68,26 @@ p a {
 #subject-menu {
   padding: 0;
   list-style-type: none;
+}
+
+.article {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.article .content {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
+
+.article p {
+  color: #35384e;
 }
 
 #subject-menu li{

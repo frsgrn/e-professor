@@ -6,6 +6,7 @@ export const state = () => ({
   blogPosts: [],
   allPages: [],
   siteInfo: [],
+  subjects: []
 });
 
 export const mutations = {
@@ -18,6 +19,9 @@ export const mutations = {
   SET_INFO(state, data) {
     state.siteInfo = data
   },
+  SET_SUBJECTS(state, data) {
+    state.subjects = data
+  }
 };
 
 export const actions = {
@@ -25,6 +29,7 @@ export const actions = {
     await dispatch('getSiteInfo')
     await dispatch('getBlogPosts')
     await dispatch('getPages')
+    await dispatch('getSubjects')
   },
   async getBlogPosts({ state, commit }) {
     const context = await require.context('~/content/blog/', false, /\.json$/);
@@ -35,6 +40,16 @@ export const actions = {
     }));
 
     commit('SET_POSTS', searchposts.reverse())
+  },
+  async getSubjects({ state, commit }) {
+    const context = await require.context('~/content/subject/', false, /\.json$/);
+
+    const searchposts = await context.keys().map(key => ({
+      ...context(key),
+      _path: `/subject/${key.replace('.json', '').replace('./', '')}`
+    }));
+
+    commit('SET_SUBJECTS', searchposts.reverse())
   },
   async getPages({ state, commit }) {
     const context = await require.context('~/content/pages/', false, /\.json$/);
@@ -51,7 +66,3 @@ export const actions = {
     commit('SET_INFO', info)
   }
 };
-
-async function loadJsonBatch() {
-  
-}
