@@ -14,7 +14,7 @@
 <template>
   <div class="container">
     <hero :title="siteInfo.sitename" :subheadline="siteInfo.sitedescription"></hero>
-    <!---<div class="section">
+    <div class="section">
       <h4>Ämnen</h4>
       <ul id="subject-menu">
         <li v-for="subject in subjects" :key="subject.id">
@@ -26,7 +26,7 @@
           </nuxt-link>
         </li>
       </ul>
-    </div>-->
+    </div>
     <div class="section" style="">
       <h4>Senaste inlägg</h4>
       <article-preview :posts="blogPosts"></article-preview>
