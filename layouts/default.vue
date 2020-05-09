@@ -34,12 +34,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: 19px;
+  font-size: 17px;
 }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  background-color: #eff0f7;
+  background-color: #f3f5f7;
 }
 
 a {
@@ -72,7 +72,8 @@ p a {
 
 .article {
   background-color: white;
-  padding: 40px;
+  padding: 25px;
+  padding-top: 35px;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
   text-align: center;
   margin: auto;
@@ -92,6 +93,10 @@ p a {
 
 #subject-menu li{
   display: inline;
+}
+
+.container {
+  padding: 0px;
 }
 
 .subject-preview {

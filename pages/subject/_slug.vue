@@ -6,20 +6,27 @@
     <div class="body" v-html="$md.render(body)"/>
     <p class="back"><a class="back-link" @click="$router.back()">Back</a></p>
   </div>--->
-  <article-view :post="post"></article-view>
+    <div class="section" style="">
+      <h4>Inlägg i {{subject.name}}</h4>
+      <article-preview :posts="blogPosts"></article-preview>
+    </div>
   </b-container>
 </template>
 
 <script>
 import ArticleView from '~/components/ArticleView.vue'
+import ArticlePreview from '~/components/ArticlePreview.vue'
+
 export default {
   components: {
-    ArticleView
+    ArticleView,
+    ArticlePreview
   },
   async asyncData({ params, app, payload, route, store }) {
-    let post = await import(`~/content/blog/${params.slug}.json`);
+    let subject = await import(`~/content/subject/${params.slug}.json`);
+    let blogPosts = store.state.blogPosts.filter(x => x.subject == params.slug)
     return {
-      post
+      subject, blogPosts
     };
   }
 }

@@ -17,8 +17,8 @@
     <div class="section">
       <h4>Ämnen</h4>
       <ul id="subject-menu">
-        <li v-for="subject in subjects" :key="subject.id">
-          <nuxt-link :to="'/subject/' + subject.id">
+        <li v-for="subject in subjects" :key="subject.name">
+          <nuxt-link :to="subject._path">
           <div class="subject-preview">
             <h4>{{subject.name}}</h4>
             <p>{{subject.description}}</p>
@@ -33,8 +33,6 @@
     </div>
   </div>
 </template>
-
-
 <script>
 
 import ArticlePreview from '~/components/ArticlePreview.vue'
