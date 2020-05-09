@@ -51,3 +51,7 @@ export const actions = {
     commit('SET_INFO', info)
   }
 };
+
+async function loadJsonBatch() {
+  
+}

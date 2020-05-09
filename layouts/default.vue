@@ -50,6 +50,7 @@ a:hover {
 
 p a:hover {
   text-decoration: underline;
+  color: #0832a5;
 }
 
 p a {

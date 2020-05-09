@@ -1,12 +1,11 @@
 <template>
 <b-navbar toggleable="lg" type="light">
   <div class="container">
-    <nuxt-link to="/"><b-navbar-brand>e-professor</b-navbar-brand></nuxt-link>
+    <nuxt-link to="/"><b-navbar-brand>{{siteInfo.sitename}}</b-navbar-brand></nuxt-link>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item href="#">Link</b-nav-item>
-        <b-nav-item href="#">Link2</b-nav-item>
+        <b-nav-item href="/admin">admin</b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -20,6 +19,15 @@
     </div>
   </b-navbar>
 </template>
+<script>
+export default {
+  computed: {
+    siteInfo() {
+      return this.$store.state.siteInfo;
+    }
+  }
+}
+</script>
 <style>
 .navbar {
     border-bottom: 0px solid #eee;
