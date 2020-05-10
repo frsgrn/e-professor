@@ -7,11 +7,29 @@ export const state = () => ({
   allPages: [],
   siteInfo: [],
   subjects: [],
+  globals: {},
 });
 
 export const getters = {
-  blogsBySubject:(state) => (subject) =>  {
-    return state.blogPosts;
+  selectedSubject:(state) => (selectedSubject) => {
+    if (selectedSubject) {
+      state.globals.selectedSubject = selectedSubject;
+      console.log("set selectedSubject: " + state.globals.selectedSubject.name);
+    } else {
+      console.log("get selectedSubject: " + state.globals.selectedSubject.name);
+    }
+    return state.globals.selectedSubject;
+  },
+  blogsForSelectedSubject:(state) => () => {
+    if (state.globals.selectedSubject) {
+      const res = state.blogPosts.filter(s => {
+        // TODO: better compare
+        return "/subject/" + s.subject == state.globals.selectedSubject._path
+      });
+      console.log("# blogsForSelectedSubject: " + res.length);
+      return res;
+    }
+    return [];
   },
 };
 

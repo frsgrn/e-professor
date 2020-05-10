@@ -18,7 +18,7 @@
       <h4>Ämnen</h4>
       <ul id="subject-menu">
         <li v-for="subject in subjects" :key="subject.name">
-          <nuxt-link :to="subject._path">
+          <nuxt-link @click.native="selectSubject(subject)" :to="subject._path">
           <div class="subject-preview">
             <h4>{{subject.name}}</h4>
             <p>{{subject.description}}</p>
@@ -44,14 +44,18 @@ export default {
   },
   computed: {
     blogPosts() {
-      //return this.$store.state.blogPosts;
-      return this.$store.getters.blogsBySubject('xxxx');
+      return this.$store.state.blogPosts;
     },
     siteInfo() {
       return this.$store.state.siteInfo;
     },
     subjects() {
       return this.$store.state.subjects
+    },
+  },
+  methods: {
+    selectSubject(selectSubject) {
+      this.$store.getters.selectedSubject(selectSubject);
     }
   }
 }
