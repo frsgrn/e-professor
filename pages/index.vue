@@ -46,7 +46,8 @@ export default {
   },
   computed: {
     blogPosts() {
-      return this.$store.state.blogPosts;
+      //return this.$store.state.blogPosts;
+      return this.$store.getters.blogsBySubject('xxxx');
     },
     siteInfo() {
       return this.$store.state.siteInfo;

@@ -6,8 +6,14 @@ export const state = () => ({
   blogPosts: [],
   allPages: [],
   siteInfo: [],
-  subjects: []
+  subjects: [],
 });
+
+export const getters = {
+  blogsBySubject:(state) => (subject) =>  {
+    return state.blogPosts;
+  },
+};
 
 export const mutations = {
   SET_POSTS(state, data) {
@@ -64,5 +70,5 @@ export const actions = {
   getSiteInfo({ state, commit }) {
     const info = require('~/content/setup/info.json');
     commit('SET_INFO', info)
-  }
+  },
 };
