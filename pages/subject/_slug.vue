@@ -22,15 +22,11 @@ export default {
     ArticleView,
     ArticlePreview
   },
-  computed: {
-    blogPosts() {
-      return this.$store.getters.blogsForSelectedSubject()
-    }
-  },
   async asyncData({ params, app, payload, route, store }) {
-    let subject = store.getters.selectedSubject
+    let subject = store.getters.selectedSubject(params.slug)
+    let blogPosts = store.getters.blogsForSelectedSubject(params.slug)
     return {
-      subject
+      subject, blogPosts
     }
   }
 }

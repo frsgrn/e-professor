@@ -18,7 +18,7 @@
       <h4>Ämnen</h4>
       <ul id="subject-menu">
         <li v-for="subject in subjects" :key="subject.name">
-          <nuxt-link @click.native="selectSubject(subject)" :to="subject._path">
+          <nuxt-link :to="subject._path">
           <div class="subject-preview">
             <h4>{{subject.name}}</h4>
             <p>{{subject.description}}</p>
@@ -29,7 +29,7 @@
     </div>
     <div class="section" style="">
       <h4>Senaste inlägg</h4>
-      <article-preview :posts="blogPosts"></article-preview>
+      <article-preview :posts="lastBlogs"></article-preview>
     </div>
   </div>
 </template>
@@ -46,6 +46,9 @@ export default {
     blogPosts() {
       return this.$store.state.blogPosts;
     },
+    lastBlogs() {
+      return this.$store.getters.lastBlogs(3);
+    },
     siteInfo() {
       return this.$store.state.siteInfo;
     },
@@ -53,11 +56,6 @@ export default {
       return this.$store.state.subjects
     },
   },
-  methods: {
-    selectSubject(selectSubject) {
-      this.$store.getters.selectedSubject(selectSubject);
-    }
-  }
 }
 </script>
 
