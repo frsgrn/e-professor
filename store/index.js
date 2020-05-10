@@ -53,15 +53,15 @@ export const actions = {
     await dispatch('getSubjects')
   },
   async getBlogPosts({ state, commit }) {
-    const context = await require.context('~/content/blog/', false, /\.json$/);
+    const context = await require.context('~/content/blog/', true, /\.json$/);
     commit('SET_POSTS', (await populate(context, 'blog')).reverse())
   },
   async getSubjects({ state, commit }) {
-    const context = await require.context('~/content/subject/', false, /\.json$/);
+    const context = await require.context('~/content/subject/', true, /\.json$/);
     commit('SET_SUBJECTS', await populate(context, 'subject'))
   },
   async getPages({ state, commit }) {
-    const context = await require.context('~/content/pages/', false, /\.json$/);
+    const context = await require.context('~/content/pages/', true, /\.json$/);
     commit('SET_PAGES', await populate(context, 'page'))
   },
   getSiteInfo({ state, commit }) {

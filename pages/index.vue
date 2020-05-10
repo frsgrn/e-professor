@@ -15,17 +15,18 @@
   <div class="container">
     <hero :title="siteInfo.sitename" :subheadline="siteInfo.sitedescription"></hero>
     <div class="section">
-      <h4>Ämnen</h4>
-      <ul id="subject-menu">
-        <li v-for="subject in subjects" :key="subject.name">
+      <h4>Collections</h4>
+      <b-row>
+        <b-col v-for="subject in subjects" :key="subject.name" cols="12" md="6">
           <nuxt-link :to="subject._path">
-          <div class="subject-preview">
-            <h4>{{subject.name}}</h4>
-            <p>{{subject.description}}</p>
-          </div>
+            <div class="subject-preview">
+              <p><b>{{subject.name}}</b></p>
+              <p>{{subject.description}}</p>
+              <small><b>{{$store.getters.getPostsFromSubjectSlug(subject._slug).length}}</b> articles in this collection</small>
+            </div>
           </nuxt-link>
-        </li>
-      </ul>
+        </b-col>
+      </b-row>
     </div>
     <div class="section" style="">
       <h4>Senaste inlägg</h4>

@@ -91,18 +91,18 @@ p a {
   color: #35384e;
 }
 
-#subject-menu li{
-  display: inline;
+.subject-preview {
+  margin: 10px 0px 0px 0px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  border-radius: 5px;
 }
 
-.subject-preview {
-  display: inline-block;
-  margin: 10px;
-  margin-left: 0px;
-  margin-right: 20px;
-  padding: 10px;
-  border: 2px solid #eee;
-  border-radius: 5px;
+.subject-preview p {
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .subject-preview * {
