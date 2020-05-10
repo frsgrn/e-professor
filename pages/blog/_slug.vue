@@ -6,6 +6,7 @@
     <div class="body" v-html="$md.render(body)"/>
     <p class="back"><a class="back-link" @click="$router.back()">Back</a></p>
   </div>--->
+  <p><nuxt-link :to="relatedSubject._path">{{relatedSubject.name}}</nuxt-link> ⮞ {{post.title}}</p>
   <article-view :post="post"></article-view>
   </b-container>
 </template>
@@ -17,9 +18,10 @@ export default {
     ArticleView
   },
   async asyncData({ params, app, payload, route, store }) {
-    let post = await import(`~/content/blog/${params.slug}.json`);
+    let post = store.getters.getPostFromSlug(params.slug)
+    let relatedSubject = store.getters.getSubjectFromSlug(post.subject)
     return {
-      post
+      post, relatedSubject
     };
   }
 }

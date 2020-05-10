@@ -8,12 +8,12 @@ collections:
     label: "Subject"
     folder: "content/subject"
     create: true
-    slug: "{{slug}}"
+    slug: "{{name}}-{{tag}}"
     format: 'json'
     fields:
       - {label: "Name", name: "name", widget: "string", required: true}
       - {label: "Tag", name: "tag", widget: "string", required: true}
-      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "string", required: false} 
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "content/blog" # The path to the folder where the documents are stored
@@ -24,7 +24,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Subheading", name: "subheading", widget: "string", required: true}
-      - {label: "Subject", widget: "relation", name: "subject", collection: "subject", searchFields: ["name", "description"], valueField: "{{slug}}", displayFields: ["name"]}
+      - {label: "Subject", widget: "relation", name: "subject", collection: "subject", searchFields: ["name", "description", "tag"], valueField: "{{slug}}", displayFields: ["name"]}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "Do MMM YYYY", required: true}
       - {label: "Author", name: "author", widget: "string", required: true}
       - {label: "Youtube-URL", name: "youtubeUrl", widget: "string"}

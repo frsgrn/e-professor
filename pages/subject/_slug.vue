@@ -23,8 +23,8 @@ export default {
     ArticlePreview
   },
   async asyncData({ params, app, payload, route, store }) {
-    let subject = store.getters.selectedSubject(params.slug)
-    let blogPosts = store.getters.blogsForSelectedSubject(params.slug)
+    let subject = store.getters.getSubjectFromSlug(params.slug)
+    let blogPosts = store.getters.getPostsFromSubjectSlug(params.slug)
     return {
       subject, blogPosts
     }
