@@ -30,7 +30,12 @@
     </div>
     <div class="section" style="">
       <h4>Senaste inlägg</h4>
-      <article-preview :posts="lastBlogs"></article-preview>
+      <div v-for="post in lastBlogs" :key="post.name">
+      <nuxt-link :to="post._path">
+        <p><b>{{post.title}}</b> - {{post.subheading}}</p>
+        </nuxt-link>
+        </div>
+      <!---<article-preview :posts="lastBlogs"></article-preview> -->
     </div>
   </div>
 </template>
@@ -48,7 +53,7 @@ export default {
       return this.$store.state.blogPosts;
     },
     lastBlogs() {
-      return this.$store.getters.lastBlogs(3);
+      return this.$store.getters.lastBlogs(5);
     },
     siteInfo() {
       return this.$store.state.siteInfo;

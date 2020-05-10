@@ -25,6 +25,12 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      {
+        src: "https://kit.fontawesome.com/244be9cb46.js",
+        type: "text/javascript"
+      }
     ]
   },
 

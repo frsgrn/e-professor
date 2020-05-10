@@ -27,8 +27,8 @@ collections:
       - {label: "Subject", widget: "relation", name: "subject", collection: "subject", searchFields: ["name", "description", "tag"], valueField: "{{slug}}", displayFields: ["name"]}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "Do MMM YYYY", required: true}
       - {label: "Author", name: "author", widget: "string", required: true}
-      - {label: "Youtube-URL", name: "youtubeUrl", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Youtube-URL", name: "youtubeUrl", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
     folder: "content/pages" # The path to the folder where the documents are stored
