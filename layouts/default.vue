@@ -95,10 +95,6 @@ p a {
   display: inline;
 }
 
-.container {
-  padding: 0px;
-}
-
 .subject-preview {
   display: inline-block;
   margin: 10px;
