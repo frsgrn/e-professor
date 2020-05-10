@@ -12,6 +12,7 @@ collections:
     format: 'json'
     fields:
       - {label: "Name", name: "name", widget: "string", required: true}
+      - {label: "Tag", name: "tag", widget: "string", required: true}
       - {label: "Description", name: "description", widget: "string", required: false}
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
