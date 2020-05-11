@@ -1,16 +1,3 @@
-<!---<template lang="html">
-  <div class="main">
-    <div class="main-header">
-      <h1>{{siteInfo.sitename}}</h1>
-      <p>{{siteInfo.sitedescription}}</p>
-    </div>
-    <div class="posts-list">
-      <h2 class="posts-list-title">Posts</h2>
-      <p class="post-link" v-for="post in blogPosts"><n-link :to="post._path">{{post.title}}</n-link></p>
-    </div>
-  </div>
-</template>-->
-
 <template>
   <div class="container">
     <hero :title="siteInfo.sitename" :subheadline="siteInfo.sitedescription"></hero>
@@ -32,10 +19,9 @@
       <h4>Latest entries</h4>
       <div v-for="post in lastBlogs" :key="post.name">
       <nuxt-link :to="post._path">
-        <p><b>{{post.title}}</b> - {{post.subheading}}</p>
+        <p style="margin: 0px;"><b>{{post.title}}</b> - {{post.subheading}}</p>
         </nuxt-link>
         </div>
-      <!---<article-preview :posts="lastBlogs"></article-preview> -->
     </div>
   </div>
 </template>
