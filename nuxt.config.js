@@ -5,7 +5,7 @@ import glob from 'glob'
 
 var dynamicRoutes = getDynamicPaths({
   '/blog': 'blog/*.json',
-  '/page': 'page/*.json',
+  '/subject': 'subject/*.json',
 });
 
 console.log(dynamicRoutes);
@@ -13,9 +13,6 @@ console.log(dynamicRoutes);
 export default {
   mode: 'universal',
 
-  /*
-  ** Headers of the page
-  */
   head: {
     title: info.sitename,
     meta: [
@@ -33,27 +30,18 @@ export default {
       }
     ]
   },
+  generate: {
+    routes: dynamicRoutes
+  },
 
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
 
-  /*
-  ** Global CSS
-  */
   css: [
   ],
 
-  /*
-  ** Plugins to load before mounting the App
-  */
   plugins: [
   ],
 
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/axios', // Doc: https://axios.nuxtjs.org/usage
