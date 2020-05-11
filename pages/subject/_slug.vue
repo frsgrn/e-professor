@@ -6,6 +6,7 @@
     <div class="body" v-html="$md.render(body)"/>
     <p class="back"><a class="back-link" @click="$router.back()">Back</a></p>
   </div>--->
+  <p><nuxt-link to="/">Collections</nuxt-link> <i class="fas fa-angle-right"></i> {{subject.name}}</p>
     <div class="section" style="">
       <div class="fancy-article-list paper">
         <div class="content">

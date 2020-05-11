@@ -40,6 +40,7 @@ p {
 body {
   font-family: 'Nunito Sans', sans-serif;
   background-color: #f3f5f7;
+  margin-bottom: 50px;
 }
 
 a {
@@ -75,7 +76,8 @@ p a {
 }
 
 .fancy-article-list {
-  background-color: #ebeef1;
+  background-color: transparent;
+  box-shadow: none !important;
 }
 
 .article-preview {
@@ -137,5 +139,4 @@ p a {
 .body img {
   width: 100%;
 }
-
 </style>
