@@ -6,7 +6,7 @@
         <div class="content">
           <h4>{{ subject.name }}</h4>
           <p>{{ subject.description }}</p>
-          <article-preview v-for="post in blogPosts" :key="post.title" :post="post"></article-preview>
+          <article-preview v-for="post in blogPosts" :key="post._slug" :post="post"></article-preview>
       </div>
       </div>
     </div>
