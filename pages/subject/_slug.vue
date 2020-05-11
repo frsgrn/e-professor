@@ -6,9 +6,21 @@
     <div class="body" v-html="$md.render(body)"/>
     <p class="back"><a class="back-link" @click="$router.back()">Back</a></p>
   </div>--->
+  <p><nuxt-link to="/">Collections</nuxt-link> <i class="fas fa-angle-right"></i> {{subject.name}}</p>
     <div class="section" style="">
-      <h4>Inlägg i {{ subject.name }}</h4>
-      <article-preview :posts="blogPosts"></article-preview>
+      <div class="fancy-article-list paper">
+        <div class="content">
+          <h4>{{ subject.name }}</h4>
+      <b-list-group>
+        <nuxt-link v-for="post in blogPosts" :key="post.title" :to="post._path">
+        <div class="article-preview">
+          <p><b>{{post.title}}</b></p>
+          <p>{{post.subheading}}</p>
+        </div>
+        </nuxt-link>
+      </b-list-group>
+      </div>
+      </div>
     </div>
   </b-container>
 </template>
@@ -23,8 +35,13 @@ export default {
     ArticlePreview
   },
   async asyncData({ params, app, payload, route, store }) {
+<<<<<<< HEAD
     let subject = store.getters.selectedSubject('/subject/' + params.slug)
     let blogPosts = store.getters.blogsForSelectedSubject(params.slug)
+=======
+    let subject = store.getters.getSubjectFromSlug(params.slug)
+    let blogPosts = store.getters.getPostsFromSubjectSlug(params.slug)
+>>>>>>> b226f8c8ed30e74039f2b907fc82fec4c98bbce4
     return {
       subject, blogPosts
     }

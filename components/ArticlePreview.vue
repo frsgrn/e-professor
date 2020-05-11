@@ -2,8 +2,8 @@
   <div>
     <div class="article-preview" v-for="post in posts" :key="post._path">
       <nuxt-link :to="post._path">
-        <h1>{{post.title}}</h1>
-        <h4>{{post.subheading}}</h4>
+        <p><b>{{post.title}}</b></p>
+        <p>{{post.subheading}}</p>
         </nuxt-link>
     </div>
   </div>
@@ -16,4 +16,5 @@ export default {
 };
 </script>
 <style>
+
 </style>

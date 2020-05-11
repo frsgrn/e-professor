@@ -1,35 +1,27 @@
-<!---<template lang="html">
-  <div class="main">
-    <div class="main-header">
-      <h1>{{siteInfo.sitename}}</h1>
-      <p>{{siteInfo.sitedescription}}</p>
-    </div>
-    <div class="posts-list">
-      <h2 class="posts-list-title">Posts</h2>
-      <p class="post-link" v-for="post in blogPosts"><n-link :to="post._path">{{post.title}}</n-link></p>
-    </div>
-  </div>
-</template>-->
-
 <template>
   <div class="container">
     <hero :title="siteInfo.sitename" :subheadline="siteInfo.sitedescription"></hero>
     <div class="section">
-      <h4>Ämnen</h4>
-      <ul id="subject-menu">
-        <li v-for="subject in subjects" :key="subject.name">
+      <h4>Collections</h4>
+      <b-row>
+        <b-col v-for="subject in subjects" :key="subject.name" cols="12" md="6">
           <nuxt-link :to="subject._path">
-          <div class="subject-preview">
-            <h4>{{subject.name}}</h4>
-            <p>{{subject.description}}</p>
-          </div>
+            <div class="subject-preview">
+              <p><b>{{subject.name}}</b></p>
+              <p>{{subject.description}}</p>
+              <small><b>{{$store.getters.getPostsFromSubjectSlug(subject._slug).length}}</b> articles in this collection</small>
+            </div>
           </nuxt-link>
-        </li>
-      </ul>
+        </b-col>
+      </b-row>
     </div>
     <div class="section" style="">
-      <h4>Senaste inlägg</h4>
-      <article-preview :posts="lastBlogs"></article-preview>
+      <h4>Latest entries</h4>
+      <div v-for="post in lastBlogs" :key="post.name">
+      <nuxt-link :to="post._path">
+        <p style="margin: 0px;"><b>{{post.title}}</b> - {{post.subheading}}</p>
+        </nuxt-link>
+        </div>
     </div>
   </div>
 </template>
@@ -47,7 +39,7 @@ export default {
       return this.$store.state.blogPosts;
     },
     lastBlogs() {
-      return this.$store.getters.lastBlogs(3);
+      return this.$store.getters.lastBlogs(5);
     },
     siteInfo() {
       return this.$store.state.siteInfo;

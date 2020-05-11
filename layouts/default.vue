@@ -40,6 +40,7 @@ p {
 body {
   font-family: 'Nunito Sans', sans-serif;
   background-color: #f3f5f7;
+  margin-bottom: 50px;
 }
 
 a {
@@ -72,16 +73,42 @@ p a {
 
 .article {
   background-color: white;
-  padding: 25px;
-  padding-top: 35px;
+}
+
+.fancy-article-list {
+  background-color: transparent;
+  box-shadow: none !important;
+}
+
+.article-preview {
+  margin: 0px 0px 10px 0px;
+  padding: 20px;
+  background-color: white;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
-  text-align: center;
-  margin: auto;
-  margin-bottom: 20px;
   border-radius: 5px;
 }
 
-.article .content {
+.article-preview p {
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.article-preview * {
+  margin: 0px;
+}
+
+.paper {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-top: 35px;
+  text-align: center;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  margin: auto;
+  padding: 25px;
+}
+
+.paper .content {
   max-width: 700px;
   margin: auto;
   text-align: left;
@@ -91,22 +118,18 @@ p a {
   color: #35384e;
 }
 
-#subject-menu li{
-  display: inline;
-}
-
-.container {
-  padding: 0px;
-}
-
 .subject-preview {
-  display: inline-block;
-  margin: 10px;
-  margin-left: 0px;
-  margin-right: 20px;
-  padding: 10px;
-  border: 2px solid #eee;
+  margin: 0px 0px 10px 0px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
   border-radius: 5px;
+}
+
+.subject-preview p {
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .subject-preview * {
@@ -116,5 +139,4 @@ p a {
 .body img {
   width: 100%;
 }
-
 </style>
