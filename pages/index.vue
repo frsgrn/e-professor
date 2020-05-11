@@ -16,9 +16,13 @@
       </b-row>
     </div>
     <div class="section" style="">
-      <h4>Latest entries</h4>
-      <article-preview v-for="post in blogPosts" :key="post.title" :post="post"></article-preview>
+      <div class="fancy-article-list paper" style="background-color: #ebeef1;">
+        <div class="content">
+          <h4>Latest entries</h4>
+          <article-preview v-for="post in blogPosts" :key="post.title" :post="post"></article-preview>
       </div>
+      </div>
+  </div>
   </div>
 </template>
 <script>
