@@ -78,6 +78,7 @@ export default {
     },
   },
   generate: {
+    fallback: false,
     routes: dynamicRoutes
   }
 }
