@@ -16,6 +16,9 @@ export default {
   /*
   ** Headers of the page
   */
+  generate: {
+    fallback: true
+  },
   head: {
     title: info.sitename,
     meta: [
