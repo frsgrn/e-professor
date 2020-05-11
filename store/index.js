@@ -11,25 +11,10 @@ export const state = () => ({
 });
 
 export const getters = {
-<<<<<<< HEAD
-  selectedSubject:(state) => (path) => {
-    if (path) {
-      return state.subjects.find(s => {
-        return s._path == path
-      });
-    }
-    return null;
-  },
-  blogsForSelectedSubject:(state) => (path) => {
-    if (path) {
-      return state.blogPosts.filter(s => {
-        return s.subject == path
-=======
   getPostsFromSubjectSlug:(state) => (subjectSlug) => {
     if (subjectSlug) {
       return state.blogPosts.filter(s => {
         return s.subject == subjectSlug
->>>>>>> b226f8c8ed30e74039f2b907fc82fec4c98bbce4
       });
     }
     return [];
