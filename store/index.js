@@ -13,8 +13,8 @@ export const state = () => ({
 export const getters = {
   selectedSubject:(state) => (path) => {
     if (path) {
-      return state.blogPosts.filter(s => {
-        return s.subject == path
+      return state.subjects.find(s => {
+        return s._path == path
       });
     }
     return null;
