@@ -17,12 +17,8 @@
     </div>
     <div class="section" style="">
       <h4>Latest entries</h4>
-      <div v-for="post in lastBlogs" :key="post.name">
-      <nuxt-link :to="post._path">
-        <p style="margin: 0px;"><b>{{post.title}}</b> - {{post.subheading}}</p>
-        </nuxt-link>
-        </div>
-    </div>
+      <article-preview v-for="post in blogPosts" :key="post.title" :post="post"></article-preview>
+      </div>
   </div>
 </template>
 <script>

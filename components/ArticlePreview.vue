@@ -1,17 +1,19 @@
 <template>
   <div>
-    <div class="article-preview" v-for="post in posts" :key="post._path">
-      <nuxt-link :to="post._path">
-        <p><b>{{post.title}}</b></p>
-        <p>{{post.subheading}}</p>
-        </nuxt-link>
+    <nuxt-link :to="post._path">
+    <div class="article-preview">
+          <p><b>{{post.title}}</b></p>
+          <p>{{post.subheading}}</p>
+          <div v-html="$md.set({ html: true, breaks: false }).renderInline(post.body)" class="body-preview"></div>
+          <p style="font-weight: bold; border-bottom: 2px solid black; display: inline;">Read more</p>
     </div>
+    </nuxt-link>
   </div>
 </template>
 <script>
 export default {
   props: [
-    "posts"
+    "post"
   ]
 };
 </script>

@@ -7,7 +7,7 @@
     </div>
     <div class="section" v-if="post.youtubeUrl && post.youtubeUrl != ''">
         <b-row>
-        <b-col sm="8" style="text-align: center; margin: auto;">
+        <b-col cols="12" style="text-align: center; margin: auto;">
             <div style="padding-bottom: 56.25%; text-align: center;">
             <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;" class="video-embed" width="100%" height="100%" :src="post.youtubeUrl.replace('watch?v=', 'embed/')" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>

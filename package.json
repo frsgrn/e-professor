@@ -1,8 +1,8 @@
 {
-  "name": "nuxt-netlifycms-boilerplate",
+  "name": "blogg-tempalte",
   "version": "0.1.0",
-  "description": "A simple boilerplate for using NetlifyCMS with Nuxt",
-  "author": "Tyler Mercer",
+  "description": "Blogger based on Nuxt and Netlify CMS",
+  "author": "Victor Forsgren",
   "private": true,
   "scripts": {
     "dev": "nuxt",

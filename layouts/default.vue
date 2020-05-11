@@ -15,17 +15,13 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Merriweather&family=Merriweather+Sans&family=Nunito&family=Nunito+Sans&family=Quattrocento&family=Quattrocento+Sans&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Eczar&family=Gentium+Basic&family=Libre+Baskerville:wght@400;700&family=Libre+Franklin&family=Proza+Libre&family=Rubik&family=Taviraj&family=Trirong&family=Work+Sans&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
-
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap');
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 400;
+  font-family: 'Jost', sans-serif;
+  font-weight: normal;
 }
 
 .headline {
@@ -38,7 +34,7 @@ p {
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   background-color: #f3f5f7;
   margin-bottom: 50px;
 }
@@ -86,6 +82,15 @@ p a {
   background-color: white;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
   border-radius: 5px;
+  
+  
+  overflow: hidden;
+}
+
+.article-preview .body-preview {
+  max-height: 100px;
+  font-size: 17px;
+  overflow: hidden;
 }
 
 .article-preview p {

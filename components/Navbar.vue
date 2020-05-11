@@ -1,5 +1,5 @@
 <template>
-<b-navbar toggleable="lg" type="light">
+<b-navbar toggleable="lg" type="dark">
   <div class="container">
     <nuxt-link to="/"><b-navbar-brand>{{siteInfo.sitename}}</b-navbar-brand></nuxt-link>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -32,5 +32,6 @@ export default {
 .navbar {
     border-bottom: 0px solid #eee;
     margin-bottom: 30px;
+    background-color: #6970E1;
 }
 </style>
