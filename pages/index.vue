@@ -29,7 +29,7 @@
       </b-row>
     </div>
     <div class="section" style="">
-      <h4>Senaste inlägg</h4>
+      <h4>Latest entries</h4>
       <div v-for="post in lastBlogs" :key="post.name">
       <nuxt-link :to="post._path">
         <p><b>{{post.title}}</b> - {{post.subheading}}</p>

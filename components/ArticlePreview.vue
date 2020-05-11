@@ -17,22 +17,4 @@ export default {
 </script>
 <style>
 
-.article-preview {
-  margin: 10px 0px 0px 0px;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
-  border-radius: 5px;
-}
-
-.article-preview p {
-    overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.article-preview * {
-  margin: 0px;
-}
-
 </style>

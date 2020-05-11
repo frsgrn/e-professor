@@ -7,8 +7,19 @@
     <p class="back"><a class="back-link" @click="$router.back()">Back</a></p>
   </div>--->
     <div class="section" style="">
-      <h4>Inlägg i {{ subject.name }}</h4>
-      <article-preview :posts="blogPosts"></article-preview>
+      <div class="fancy-article-list paper">
+        <div class="content">
+          <h4>{{ subject.name }}</h4>
+      <b-list-group>
+        <nuxt-link v-for="post in blogPosts" :key="post.title" :to="post._path">
+        <div class="article-preview">
+          <p><b>{{post.title}}</b></p>
+          <p>{{post.subheading}}</p>
+        </div>
+        </nuxt-link>
+      </b-list-group>
+      </div>
+      </div>
     </div>
   </b-container>
 </template>

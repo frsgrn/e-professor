@@ -72,16 +72,41 @@ p a {
 
 .article {
   background-color: white;
-  padding: 25px;
-  padding-top: 35px;
+}
+
+.fancy-article-list {
+  background-color: #ebeef1;
+}
+
+.article-preview {
+  margin: 0px 0px 10px 0px;
+  padding: 20px;
+  background-color: white;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
-  text-align: center;
-  margin: auto;
-  margin-bottom: 20px;
   border-radius: 5px;
 }
 
-.article .content {
+.article-preview p {
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.article-preview * {
+  margin: 0px;
+}
+
+.paper {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-top: 35px;
+  text-align: center;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  margin: auto;
+  padding: 25px;
+}
+
+.paper .content {
   max-width: 700px;
   margin: auto;
   text-align: left;
@@ -92,7 +117,7 @@ p a {
 }
 
 .subject-preview {
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 10px 0px;
   padding: 20px;
   background-color: white;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
