@@ -29,7 +29,7 @@ export default {
   methods: {
     submit() {
       if(this.searchQuery.length > 0) {
-        this.$router.push("/search/"+this.searchQuery);
+        this.$router.push({name: "search", query: {q: this.searchQuery}}); 
       }
     }
   },
