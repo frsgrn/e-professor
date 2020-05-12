@@ -80,9 +80,6 @@ export default {
   generate: {
     fallback: false,
     routes: dynamicRoutes
-  },
-  router: {
-    trailingSlash: false
   }
 }
 
