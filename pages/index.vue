@@ -2,6 +2,10 @@
   <div class="container">
     <hero :title="siteInfo.sitename" :subheadline="siteInfo.sitedescription"></hero>
     <div class="section">
+          <h4>Latest entries</h4>
+          <article-preview v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
+  </div>
+    <div class="section">
       <h4>Collections</h4>
       <b-row>
         <b-col v-for="subject in subjects" :key="subject.name" cols="12" md="6">
@@ -15,10 +19,6 @@
         </b-col>
       </b-row>
     </div>
-    <div class="section">
-          <h4>Latest entries</h4>
-          <article-preview v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
-  </div>
   </div>
 </template>
 <script>
