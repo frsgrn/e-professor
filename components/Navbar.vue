@@ -30,6 +30,7 @@ export default {
     submit() {
       if(this.searchQuery.length > 0) {
         this.$router.push({name: "search", query: {q: this.searchQuery}}); 
+        this.searchQuery = ""
       }
     }
   },
