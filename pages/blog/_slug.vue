@@ -20,10 +20,9 @@ export default {
   async asyncData({ params, app, payload, route, store, error }) {
     try {
     let post = store.getters.getPostFromSlug(params.slug)
-    let relatedSubject = store.getters.getSubjectFromSlug(post.subject)
     if(!post) throw new Error()
     return {
-      post, relatedSubject
+      post
     };
     } catch(e) {
       error({statusCode: 404, message: 'Post not found'})
