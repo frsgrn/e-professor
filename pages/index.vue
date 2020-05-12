@@ -15,9 +15,9 @@
         </b-col>
       </b-row>
     </div>
-    <div class="section" style="">
+    <div class="section">
           <h4>Latest entries</h4>
-          <article-preview style="max-width: 550px;" v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
+          <article-preview v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
   </div>
   </div>
 </template>
