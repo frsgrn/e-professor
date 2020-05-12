@@ -15,8 +15,6 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap');
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Jost', sans-serif;
   font-weight: normal;
