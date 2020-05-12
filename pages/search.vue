@@ -4,7 +4,7 @@
       <div class="fancy-article-list paper">
         <div class="content">
             <div v-if="results.length > 0">
-                <h4>Showing results for query "{{this.$route.query.q}}"</h4>
+                <h4>Search results for "{{this.$route.query.q}}"</h4>
                 <div v-for="result in results" :key="result.item._slug">
                   <article-preview :post="result.item"></article-preview>
                 </div>

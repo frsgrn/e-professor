@@ -8,7 +8,7 @@
               <p>Associate professor at Luleå University of Technology in Sweden</p>
             </div>
       </div>
-      <h2>{{subheadline}}</h2>
+      <h4>{{subheadline}}</h4>
     </div>
   </div>
 </template>
