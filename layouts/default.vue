@@ -37,6 +37,7 @@ body {
   font-family: 'Jost', sans-serif;
   background-color: #f3f5f7;
   margin-bottom: 50px;
+  word-wrap: break-word;
 }
 
 a {
@@ -94,7 +95,7 @@ p a {
 }
 
 .article-preview p {
-    overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -132,7 +133,7 @@ p a {
 }
 
 .subject-preview p {
-    overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
