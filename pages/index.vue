@@ -19,7 +19,7 @@
       <div class="fancy-article-list paper" style="background-color: #ebeef1;">
         <div class="content">
           <h4>Latest entries</h4>
-          <article-preview v-for="post in blogPosts" :key="post._slug" :post="post"></article-preview>
+          <article-preview v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
       </div>
       </div>
   </div>
@@ -39,7 +39,7 @@ export default {
       return this.$store.state.blogPosts;
     },
     lastBlogs() {
-      return this.$store.getters.lastBlogs(5);
+      return this.$store.getters.lastBlogs(3);
     },
     siteInfo() {
       return this.$store.state.siteInfo;
