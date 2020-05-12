@@ -5,7 +5,7 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads"
 collections:
   - name: "subject"
-    label: "Subject"
+    label: "Collections"
     folder: "content/subject"
     create: true
     slug: "{{name}}"
@@ -23,7 +23,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Subheading", name: "subheading", widget: "string", required: true}
-      - {label: "Subject", widget: "relation", name: "subject", required: false, collection: "subject", searchFields: ["name", "description", "tag"], valueField: "{{slug}}", displayFields: ["name"]}
+      - {label: "Collection", widget: "relation", name: "subject", multiple: true, required: false, collection: "subject", searchFields: ["name", "description", "tag"], valueField: "{{slug}}", displayFields: ["name"]}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "Do MMM YYYY", required: true}
       - {label: "Author", name: "author", widget: "string", required: true}
       - {label: "Youtube-URL", name: "youtubeUrl", widget: "string", required: false}

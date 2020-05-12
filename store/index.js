@@ -11,21 +11,21 @@ export const state = () => ({
 });
 
 export const getters = {
-  getPostsFromSubjectSlug:(state) => (subjectSlug) => {
+  getPostsFromSubjectSlug: (state) => (subjectSlug) => {
     if (subjectSlug) {
       return state.blogPosts.filter(s => {
-        return s.subject == subjectSlug
+        return s.subject.includes(subjectSlug)
       });
     }
     return [];
   },
-  lastBlogs:(state) => (num) => {
+  lastBlogs: (state) => (num) => {
     return state.blogPosts.slice(0, num)
   },
-  getSubjectFromSlug:(state) => (slug) => {
+  getSubjectFromSlug: (state) => (slug) => {
     return state.subjects.find(subject => subject._slug == slug)
   },
-  getPostFromSlug:(state) => (slug) => {
+  getPostFromSlug: (state) => (slug) => {
     return state.blogPosts.find(post => post._slug == slug)
   }
 };

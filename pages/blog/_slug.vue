@@ -6,7 +6,7 @@
     <div class="body" v-html="$md.render(body)"/>
     <p class="back"><a class="back-link" @click="$router.back()">Back</a></p>
   </div>--->
-  <p><nuxt-link to="/">Collections</nuxt-link> <i class="fas fa-angle-right"></i> <span v-if="relatedSubject"><nuxt-link :to="relatedSubject._path" v-if="relatedSubject">{{relatedSubject.name}}</nuxt-link> <i class="fas fa-angle-right"></i></span> {{post.title}}</p>
+  <p><nuxt-link to="/">Articles</nuxt-link> <i class="fas fa-angle-right"></i> {{post.title}}</p>
   <article-view :post="post"></article-view>
   </b-container>
 </template>
