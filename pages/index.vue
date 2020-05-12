@@ -13,7 +13,7 @@
             <div class="subject-preview">
               <p><b>{{subject.name}}</b></p>
               <p>{{subject.description}}</p>
-              <small><b>{{$store.getters.getPostsFromSubjectSlug(subject._slug).length}}</b> articles in this collection</small>
+              <small><b>{{$store.getters.getPostsFromSubjectSlug(subject._slug).length}}</b> article(s) in this collection</small>
             </div>
           </nuxt-link>
         </b-col>
