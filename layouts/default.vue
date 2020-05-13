@@ -1,49 +1,30 @@
 <template>
   <div>
-    <navbar></navbar>
-    <nuxt />
-    <div class="footer">
-      <b-container style="">
-      <ul>
-        <li>{{this.$store.state.siteInfo.sitename}} {{new Date().getFullYear()}}</li>
-        <li><a href="/admin">admin</a></li>
-      </ul>
-      </b-container>
+    <div class="e-p-content">
+      <navbar></navbar>
+      <nuxt />
     </div>
+    <e-p-footer></e-p-footer>
   </div>
 </template>
 
 <script>
+
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+
 export default {
   components: {
-    Navbar
+    Navbar,
+    'EPFooter': Footer
   }
 }
 </script>
 
 <style>
 
-.footer {
-  background-color: #eee;
-  padding: 30px;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.footer a {
-  border-bottom: 2px solid black;
-}
-
-.footer ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.footer ul li {
-  display: inline;
-  margin: 15px;
+.e-p-content {
+  min-height: calc(100vh - 87px);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,6 +45,7 @@ body {
   font-family: 'Jost', sans-serif;
   background-color: #f3f5f7;
   word-wrap: break-word;
+  height: 100%;
 }
 
 a {
@@ -109,8 +91,8 @@ p a {
   background-color: white;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
   border-radius: 5px;
-  
-  
+
+
   overflow: hidden;
 }
 
