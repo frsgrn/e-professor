@@ -6,7 +6,7 @@
             <div class="profile" style="float: left;"></div>
             <div class="information">
               <h4 style="margin: 0px;">Ossi Pesämaa</h4>
-              <p>Associate professor at Luleå University of Technology in Sweden <i class="fas fa-angle-double-right"></i> <span style="border-bottom: 2px solid black;"><span v-if="!toggled">read more</span><span v-else>hide</span></span></p>
+              <p>Associate professor at Luleå University of Technology in Sweden <span class="toggleIcon"><span v-if="!toggled"><i class="fas fa-expand"></i></span><span v-else><i class="fas fa-compress"></i></span></span></p>
             </div>
       </div>
       <div class="more-information" v-if="this.$store.state.siteInfo.about" :hidden="!toggled" v-html="$md.render(this.$store.state.siteInfo.about)"></div>
@@ -35,7 +35,11 @@ export default {
 </script>
 <style>
 
-.hero .more-information {
+.hero .information .toggleIcon {
+}
+
+.hero .profile {
+  position: relative;
 }
 
 .hero .profile {
