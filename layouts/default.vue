@@ -2,6 +2,14 @@
   <div>
     <navbar></navbar>
     <nuxt />
+    <div class="footer">
+      <b-container style="">
+      <ul>
+        <li>{{this.$store.state.siteInfo.sitename}}</li>
+        <li><a href="/admin">admin</a></li>
+      </ul>
+      </b-container>
+    </div>
   </div>
 </template>
 
@@ -15,6 +23,29 @@ export default {
 </script>
 
 <style>
+
+.footer {
+  background-color: #eee;
+  padding: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer a {
+  border-bottom: 2px solid black;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer ul li {
+  display: inline;
+  margin: 15px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Jost', sans-serif;
   font-weight: normal;
@@ -32,7 +63,6 @@ p {
 body {
   font-family: 'Jost', sans-serif;
   background-color: #f3f5f7;
-  margin-bottom: 50px;
   word-wrap: break-word;
 }
 
