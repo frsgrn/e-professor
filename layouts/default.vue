@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-size: 17px;
+  margin-bottom: 8px;
 }
 
 body {

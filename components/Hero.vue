@@ -1,12 +1,15 @@
 <template>
   <div>
     <div class="hero" style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">
+      <div style="cursor: pointer;" v-on:click="toggleMoreInformation()">
       <div style="display: inline;">
             <div class="profile" style="float: left;"></div>
             <div class="information">
               <h4 style="margin: 0px;">Ossi Pesämaa</h4>
               <p>Associate professor at Luleå University of Technology in Sweden</p>
             </div>
+      </div>
+      <div class="more-information" v-if="this.$store.state.siteInfo.about" :hidden="!toggled" v-html="$md.render(this.$store.state.siteInfo.about)"></div>
       </div>
       <h4>{{subheadline}}</h4>
     </div>
@@ -17,10 +20,23 @@ export default {
   props: [
     "title",
     "subheadline"
-  ]
+  ],
+  data() {
+    return {
+      toggled: false
+    }
+  },
+  methods: {
+    toggleMoreInformation() {
+      this.toggled = !this.toggled
+    }
+  }
 };
 </script>
 <style>
+
+.hero .more-information {
+}
 
 .hero .profile {
   width: 50px;
