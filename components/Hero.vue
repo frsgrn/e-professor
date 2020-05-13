@@ -33,10 +33,14 @@ export default {
 }
 
 @media screen and (max-width: 800px) {
-  .profile {
+  .hero .profile {
     float: none !important;
-    height: 600px;
     margin-bottom: 15px;
+    text-align: center;
+    margin: auto;
+  }
+  .hero .information {
+    text-align: center;
   }
 }
 
