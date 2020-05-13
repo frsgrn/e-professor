@@ -1,8 +1,8 @@
 <template>
   <div class="article paper">
       <div class="content">
-        <h1 class="headline">{{post.title}}</h1>
-        <h2 class="subheading">{{post.subheading}}</h2>
+        <h1 style="font-weight: bold; margin: 0px;">{{post.title}}</h1>
+        <h2>{{post.subheading}}</h2>
     <div v-if="post.youtubeUrl && post.youtubeUrl != ''">
         <b-row>
         <b-col cols="12" style="text-align: center; margin: auto;">

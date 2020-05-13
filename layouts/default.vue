@@ -32,11 +32,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-.headline {
-  font-size: 3.3em;
-  margin-bottom: 0px;
-}
-
 p {
   font-size: 17px;
   margin-bottom: 8px;
