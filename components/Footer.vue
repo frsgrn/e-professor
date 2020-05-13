@@ -3,9 +3,9 @@
       <b-container>
         <ul>
           <li>{{this.$store.state.siteInfo.sitename}} {{new Date().getFullYear()}}</li>
-          <li><a href="/admin">admin</a></li>
-          <li><a href="https://se.linkedin.com/">LinkedIn</a></li>
-          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://se.linkedin.com/"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i> Facebook</a></li>
+          <li><a href="/admin"><i class="fas fa-align-left"></i> Admin</a></li>
         </ul>
       </b-container>
     </div>
@@ -42,6 +42,7 @@
 .footer ul li {
   display: inline;
   margin: 10px;
+  white-space: nowrap;
 }
 
 </style>
