@@ -43,8 +43,8 @@ export default {
 }
 
 .hero .profile {
-  width: 50px;
-  height: 50px;
+  width: 53px;
+  height: 53px;
   background-image: url("/profile.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
