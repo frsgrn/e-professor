@@ -1,11 +1,9 @@
 <template>
   <div class="article paper">
       <div class="content">
-    <div class="section">
         <h1 class="headline">{{post.title}}</h1>
         <h2 class="subheading">{{post.subheading}}</h2>
-    </div>
-    <div class="section" v-if="post.youtubeUrl && post.youtubeUrl != ''">
+    <div v-if="post.youtubeUrl && post.youtubeUrl != ''">
         <b-row>
         <b-col cols="12" style="text-align: center; margin: auto;">
             <div style="padding-bottom: 56.25%; text-align: center;">
