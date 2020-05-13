@@ -5,7 +5,7 @@
     <div class="footer">
       <b-container style="">
       <ul>
-        <li>{{this.$store.state.siteInfo.sitename}}</li>
+        <li>{{this.$store.state.siteInfo.sitename}} {{new Date().getFullYear()}}</li>
         <li><a href="/admin">admin</a></li>
       </ul>
       </b-container>
