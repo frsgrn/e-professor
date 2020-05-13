@@ -43,7 +43,7 @@ export default {
     subjects() {
       return this.$store.state.subjects
     },
-  },
+  }
 }
 </script>
 
