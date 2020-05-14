@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>
+    <p class="navigation-bar">
         <span v-for="route in routes" :key="route.url">
             <span v-if="route.url">
         <nuxt-link :to="route.url">
