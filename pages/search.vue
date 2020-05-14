@@ -1,32 +1,22 @@
 <template lang="html">
   <b-container>
-    <div class="section">
-      <div class="fancy-article-list paper">
-        <div class="content">
-            <div v-if="results.length > 0">
-                <h4>Search results for "{{this.$route.query.q}}"</h4>
-                <div v-for="result in results" :key="result.item._slug">
-                  <article-preview :post="result.item"></article-preview>
-                </div>
-            </div>
-            <div v-else>
-                <h4>No results found for query "{{this.$route.query.q}}"</h4>
-            </div>
-      </div>
-      </div>
-    </div>
+    <navigation-bar :routes="[{name: 'search'}]"></navigation-bar>
+    <article-preview-list :posts="results.map(x => x.item)" :title="titleMessage"></article-preview-list>
   </b-container>
 </template>
 
 <script>
-import ArticleView from "~/components/ArticleView.vue";
 import ArticlePreview from "~/components/ArticlePreview.vue";
+import NavigationBar from "~/components/NavigationBar";
+import ArticlePreviewList from "~/components/ArticlePreviewList.vue";
+
 import Fuse from "fuse.js";
 
 export default {
   components: {
-    ArticleView,
-    ArticlePreview
+    ArticlePreview,
+    ArticlePreviewList,
+    NavigationBar
   },
   computed: {
     results() {
@@ -36,6 +26,10 @@ export default {
       };
       const fuse = new Fuse(this.$store.state.blogPosts, options);
       return fuse.search(this.$route.query.q).sort((a, b) => (a.score > b.score ? 1 : -1));
+    },
+    titleMessage() {
+      if (this.results.length > 0) return "Search results for \"" + this.$route.query.q + "\""
+      else return "Could not find anything matching query \"" + this.$route.query.q + "\""
     }
   },
   watchQuery: true,
