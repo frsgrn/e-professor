@@ -11,7 +11,6 @@
       </div>
       <div class="more-information" v-if="this.$store.state.siteInfo.about" :hidden="!toggled" v-html="$md.render(this.$store.state.siteInfo.about)"></div>
       </div>
-      <h4>{{subheadline}}</h4>
     </div>
   </div>
 </template>

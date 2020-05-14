@@ -4,7 +4,6 @@
     <nuxt-link to="/"><b-navbar-brand>{{siteInfo.sitename}}</b-navbar-brand></nuxt-link>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
-      <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-form>
           <b-form-input size="sm" class="mr-sm-2" :placeholder="'Search ' + siteInfo.sitename" v-model="searchQuery" style="border: none; color: black;"></b-form-input>
