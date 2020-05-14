@@ -2,14 +2,9 @@
 <b-navbar toggleable="lg" type="dark">
   <div class="container">
     <nuxt-link to="/"><b-navbar-brand>{{siteInfo.sitename}}</b-navbar-brand></nuxt-link>
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-    <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class="ml-auto">
-        <b-nav-form v-on:submit.prevent="submit()">
+    <b-nav-form v-on:submit.prevent="submit()">
           <b-form-input size="sm" class="mr-sm-2" :placeholder="'Search ' + siteInfo.sitename" v-model="searchQuery" style="border: none; color: black;"></b-form-input>
         </b-nav-form>
-      </b-navbar-nav>
-    </b-collapse>
     </div>
   </b-navbar>
 </template>
