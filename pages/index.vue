@@ -1,20 +1,24 @@
 <template>
   <div class="container">
     <hero :title="siteInfo.sitename" :subheadline="siteInfo.sitedescription"></hero>
-    <div class="section">
-          <h4>Latest articles</h4>
-          <p><nuxt-link to="/subject/all">Show all articles</nuxt-link></p>
-          <article-preview v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
-  </div>
+    <h4>Latest articles</h4>
+    <article-preview v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
+    <p style="text-align: center;">
+      <nuxt-link to="/subject/all"><i class="fas fa-stream"></i> Show all articles</nuxt-link>
+    </p>
     <div class="section">
       <h4>Collections</h4>
       <b-row>
         <b-col v-for="subject in subjects" :key="subject.name" cols="12" md="6">
           <nuxt-link :to="subject._path">
             <div class="subject-preview">
-              <p><b>{{subject.name}}</b></p>
+              <p>
+                <b>{{subject.name}}</b>
+              </p>
               <p>{{subject.description}}</p>
-              <small><b>{{$store.getters.getPostsFromSubjectSlug(subject._slug).length}}</b> article(s) in this collection</small>
+              <small>
+                <b>{{$store.getters.getPostsFromSubjectSlug(subject._slug).length}}</b> article(s) in this collection
+              </small>
             </div>
           </nuxt-link>
         </b-col>
@@ -23,13 +27,13 @@
   </div>
 </template>
 <script>
-
-import ArticlePreview from '~/components/ArticlePreview.vue'
-import Hero from '~/components/Hero.vue'
+import ArticlePreview from "~/components/ArticlePreview.vue";
+import Hero from "~/components/Hero.vue";
 
 export default {
   components: {
-    ArticlePreview, Hero
+    ArticlePreview,
+    Hero
   },
   computed: {
     blogPosts() {
@@ -42,10 +46,10 @@ export default {
       return this.$store.state.siteInfo;
     },
     subjects() {
-      return this.$store.state.subjects
-    },
+      return this.$store.state.subjects;
+    }
   }
-}
+};
 </script>
 
 <style lang="css" scoped>

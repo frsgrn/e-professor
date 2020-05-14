@@ -1,6 +1,9 @@
 <template>
   <div>
     <p class="navigation-bar">
+        <span>
+            <n-link to="/">{{this.$store.state.siteInfo.sitename}}</n-link> <i class="fas fa-angle-right"></i>
+        </span>
         <span v-for="route in routes" :key="route.url">
             <span v-if="route.url">
         <nuxt-link :to="route.url">
