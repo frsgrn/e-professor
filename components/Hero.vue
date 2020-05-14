@@ -6,12 +6,11 @@
             <div class="profile" style="float: left;"></div>
             <div class="information">
               <h4 style="margin: 0px;">Ossi Pesämaa</h4>
-              <p>Associate professor at Luleå University of Technology in Sweden <span class="toggleIcon"><span v-if="!toggled"><i class="fas fa-expand"></i></span><span v-else><i class="fas fa-compress"></i></span></span></p>
+              <p><span class="toggleIcon"><span v-if="!toggled"><i class="far fa-window-maximize"></i></span><span v-else><i class="far fa-window-close"></i></span></span> Associate professor at Luleå University of Technology in Sweden</p>
             </div>
       </div>
       <div class="more-information" v-if="this.$store.state.siteInfo.about" :hidden="!toggled" v-html="$md.render(this.$store.state.siteInfo.about)"></div>
       </div>
-      <h4>{{subheadline}}</h4>
     </div>
   </div>
 </template>

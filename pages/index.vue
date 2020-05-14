@@ -3,6 +3,7 @@
     <hero :title="siteInfo.sitename" :subheadline="siteInfo.sitedescription"></hero>
     <div class="section">
           <h4>Latest articles</h4>
+          <p><nuxt-link to="/subject/all">Show all articles</nuxt-link></p>
           <article-preview v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
   </div>
     <div class="section">
