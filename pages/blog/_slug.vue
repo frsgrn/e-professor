@@ -1,21 +1,17 @@
 <template lang="html">
 <b-container>
-  <!---<div class="post">
-    <h1 class="title">{{title}}</h1>
-    <p class="date">Posted by {{author}} on {{date}}</p>
-    <div class="body" v-html="$md.render(body)"/>
-    <p class="back"><a class="back-link" @click="$router.back()">Back</a></p>
-  </div>--->
-  <p><nuxt-link to="/">Articles</nuxt-link> <i class="fas fa-angle-right"></i> {{post.title}}</p>
+    <navigation-bar :routes="[{name: 'articles'}, {name: 'all', url: '/subject/all'}, {name: post.title}]"></navigation-bar>
   <article-view :post="post"></article-view>
   </b-container>
 </template>
 
 <script>
 import ArticleView from '~/components/ArticleView.vue'
+import NavigationBar from "~/components/NavigationBar";
+
 export default {
   components: {
-    ArticleView
+    ArticleView, NavigationBar
   },
   async asyncData({ params, app, payload, route, store, error }) {
     try {

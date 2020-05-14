@@ -1,26 +1,19 @@
 <template lang="html">
   <b-container>
-  <p><nuxt-link to="/">Collections</nuxt-link> <i class="fas fa-angle-right"></i> all</p>
+  <navigation-bar :routes="[{name: 'articles'}, {name: 'all'}]"></navigation-bar>
     <div class="section">
-      <div class="fancy-article-list paper">
-        <div class="content">
-          <h4>All articles</h4>
-          <p>All articles in chronological order.</p>
-          <article-preview v-for="post in this.$store.state.blogPosts" :key="post._slug" :post="post"></article-preview>
-      </div>
-      </div>
+      <article-preview-list :posts="this.$store.state.blogPosts" title="All articles" description="The entire collection of articles, sorted chronological order."></article-preview-list>
     </div>
   </b-container>
 </template>
 
 <script>
-import ArticleView from "~/components/ArticleView.vue";
-import ArticlePreview from "~/components/ArticlePreview.vue";
+import ArticlePreviewList from "~/components/ArticlePreviewList.vue";
+import NavigationBar from "~/components/NavigationBar";
 
 export default {
   components: {
-    ArticleView,
-    ArticlePreview
+    ArticlePreviewList, NavigationBar
   }
 };
 </script>
