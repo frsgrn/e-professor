@@ -23,4 +23,10 @@
     }
 </script>
 <style>
+
+blockquote {
+    padding-left: 10px;
+    border-left: 2px solid #d3d3d3;
+}
+
 </style>
