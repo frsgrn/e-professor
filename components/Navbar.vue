@@ -5,12 +5,16 @@
         <b-navbar-brand>{{siteInfo.sitename}}</b-navbar-brand>
       </nuxt-link>
       <b-nav-form v-on:submit.prevent="submit()">
+        <b-input-group size="sm">
+          <b-input-group-prepend>
+            <button class="btn" id="search-icon"><i class="fas fa-search"></i></button>
+          </b-input-group-prepend>
         <b-form-input
-          size="sm"
-          class="mr-sm-2 search-field"
+          class="search-field"
           :placeholder="'Search ' + siteInfo.sitename"
           v-model="searchQuery"
         ></b-form-input>
+        </b-input-group>
       </b-nav-form>
     </div>
   </b-navbar>
@@ -51,7 +55,18 @@ export default {
   box-shadow: none;
 }
 
+#search-icon {
+  background-color: #f1f3f2;
+  border: solid 2px gray;
+  border-right: none;
+  height: 31px;
+}
+
 .navbar .search-field:focus {
+  box-shadow: none;
+}
+
+.navbar #search-icon:focus {
   box-shadow: none;
 }
 </style>
