@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="section">
     <nuxt-link :to="post._path">
     <div class="article-preview">
           <p><i class="fab fa-youtube" v-if="post.youtubeUrl"></i> <b>{{post.title}}</b></p>
