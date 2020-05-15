@@ -1,7 +1,7 @@
 <template lang="html">
 <b-container>
     <navigation-bar :routes="[{name: 'articles'}, {name: 'all', url: '/subject/all'}, {name: post.title}]"></navigation-bar>
-  <article-view :post="post"></article-view>
+  <article-view :post="post" class="section"></article-view>
   </b-container>
 </template>
 
