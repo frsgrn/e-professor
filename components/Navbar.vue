@@ -41,17 +41,14 @@ export default {
 .navbar {
   border-bottom: 0px solid #eee;
   margin-bottom: 30px;
-  background-color: white;
-  border-bottom: 4px solid #eee;
+  background-color: #f1f3f2;
 }
 
 .navbar .search-field {
   border: none;
   color: black;
-  background-color: white;
-  border: 2px solid #eee;
+  background-color: #f9f9f9;
   box-shadow: none;
-  border-bottom: 4px solid #eee;
 }
 
 .navbar .search-field:focus {
