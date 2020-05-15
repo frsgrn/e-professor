@@ -1,40 +1,57 @@
 <template>
   <div>
-    <div class="hero" style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">
-      <div style="cursor: pointer;" v-on:click="toggleMoreInformation()">
-      <div style="display: inline;">
-            <div class="profile" style="float: left;"></div>
-            <div class="information">
-              <h4 style="margin: 0px;">Ossi Pesämaa</h4>
-              <p><span class="toggleIcon"><span v-if="!toggled"><i class="far fa-window-maximize"></i></span><span v-else><i class="far fa-window-close"></i></span></span> Associate professor at Luleå University of Technology in Sweden</p>
-            </div>
-      </div>
-      <div class="more-information" v-if="this.$store.state.siteInfo.about" :hidden="!toggled" v-html="$md.render(this.$store.state.siteInfo.about)"></div>
+    <div
+      class="hero"
+      style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;"
+    >
+      <div>
+        <div style="display: inline; cursor: pointer;" v-on:click="toggleMoreInformation()">
+          <div class="profile" style="float: left;"></div>
+          <div class="information">
+            <h4 style="margin: 0px;">Ossi Pesämaa</h4>
+            <p>
+              <span class="toggleIcon">
+                <span v-if="!toggled">
+                  <i class="far fa-window-maximize"></i>
+                </span>
+                <span v-else>
+                  <i class="far fa-window-close"></i>
+                </span>
+              </span> Associate professor at Luleå University of Technology in Sweden
+            </p>
+          </div>
+        </div>
+        <div :hidden="!toggled">
+          <p class="contact-information"><span><i class="fas fa-mobile-alt"></i> +49703248747</span> <span><i class="far fa-envelope"></i> email@example.com</span></p>
+        <div
+          class="more-information"
+          v-if="this.$store.state.siteInfo.about"
+          v-html="$md.render(this.$store.state.siteInfo.about)"
+        ></div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  props: [
-    "title",
-    "subheadline"
-  ],
+  props: ["title", "subheadline"],
   data() {
     return {
       toggled: false
-    }
+    };
   },
   methods: {
     toggleMoreInformation() {
-      this.toggled = !this.toggled
+      this.toggled = !this.toggled;
     }
   }
 };
 </script>
 <style>
-
-.hero .information .toggleIcon {
+.contact-information span{
+  margin-right: 20px;
+  white-space: nowrap;
 }
 
 .hero .profile {
@@ -62,5 +79,4 @@ export default {
     text-align: center;
   }
 }
-
 </style>
