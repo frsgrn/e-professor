@@ -1,7 +1,7 @@
 <template>
-  <div class="section">
+  <div>
     <nuxt-link :to="post._path">
-    <div class="article-preview">
+    <div class="article-preview section">
           <p><i class="fab fa-youtube" v-if="post.youtubeUrl"></i> <b>{{post.title}}</b></p>
           <p>{{post.subheading}}</p>
           <div style="color: #00000090;" v-html="$md.set({ html: true, breaks: false }).renderInline(post.body)" class="body-preview"></div>
