@@ -45,7 +45,7 @@ export default {
 }
 
 .navbar .search-field {
-  border: none;
+  border: solid 2px gray;
   color: black;
   background-color: #f9f9f9;
   box-shadow: none;
