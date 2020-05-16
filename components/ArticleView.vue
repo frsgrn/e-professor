@@ -34,6 +34,9 @@ export default {
   props: ["post"],
   components: {
     Bookmark
+  },
+  mounted() {
+    this.$store.commit('PUSH_HISTORY', this.post)
   }
 };
 </script>

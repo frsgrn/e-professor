@@ -1,11 +1,24 @@
 <template>
   <div class="container">
     <hero :title="siteInfo.sitename" :subheadline="siteInfo.sitedescription"></hero>
-    <h4>Latest articles</h4>
-    <article-preview v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
-    <p style="text-align: center;">
-      <nuxt-link to="/subject/all"><i class="fas fa-stream"></i> Show all articles</nuxt-link>
-    </p>
+    <div class="section" v-if="history.length > 0">
+      <h4>Continue reading</h4>
+      <article-preview :post="history[0]"></article-preview>
+      <p style="text-align: center;" @click="$store.commit('CLEAR_HISTORY')">
+        <n-link to="/">
+          <i class="fas fa-trash-alt"></i> Clear history
+        </n-link>
+      </p>
+    </div>
+    <div class="section">
+      <h4>Latest articles</h4>
+      <article-preview v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
+      <p style="text-align: center;">
+        <nuxt-link to="/subject/all">
+          <i class="fas fa-stream"></i> Show all articles
+        </nuxt-link>
+      </p>
+    </div>
     <div class="section">
       <h4>Collections</h4>
       <b-row>
@@ -53,11 +66,14 @@ export default {
     siteInfo() {
       return this.$store.state.siteInfo;
     },
+    history() {
+      return this.$store.state.sessionStorage.history
+    },
     subjects() {
       return this.$store.state.subjects;
     },
     bookmarks() {
-      return this.$store.getters.getBookmarks()
+      return this.$store.getters.getBookmarks();
     }
   }
 };

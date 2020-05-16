@@ -7,7 +7,7 @@ export const state = () => ({
   allPages: [],
   siteInfo: [],
   subjects: [],
-  sessionStorage: {bookmarks: []},
+  sessionStorage: {bookmarks: [], history: []},
   globals: {},
 });
 
@@ -52,6 +52,15 @@ export const mutations = {
   },
   REMOVE_BOOKMARK(state, data) {
     state.sessionStorage.bookmarks = state.sessionStorage.bookmarks.filter(b_post => data._slug != b_post._slug)
+  },
+  PUSH_HISTORY(state, data) {
+    if(state.sessionStorage.history)
+      state.sessionStorage.history = state.sessionStorage.history.filter(b_post => data._slug != b_post._slug)
+    state.sessionStorage.history.unshift(data)
+    console.log("Current history length:", state.sessionStorage.history)
+  },
+  CLEAR_HISTORY(state, data) {
+    state.sessionStorage.history = []
   }
 };
 
