@@ -2,7 +2,7 @@
   <div>
       <!---- TA INTE BORT FÅR DET ATT FUNGERA AV NÅGON ANLENDING --->
     <div v-if="bookmarks.length > 0"></div>
-    <div v-on:click="toggleBookmark()">
+    <div v-on:click="toggleBookmark()" style="font-size: 20px;">
       <span v-if="isBookmarked"><i class="fas fa-bookmark"></i></span>
       <span v-else><i class="far fa-bookmark"></i></span>
     </div>
