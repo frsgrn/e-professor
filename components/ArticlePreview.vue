@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="article-preview" style="position: relative;">
-      <bookmark :post="post" style="position: absolute; right: 30px; top: 20px;"></bookmark>
+      <bookmark :post="post" style="position: absolute; right: 10px; top: 0px; padding: 20px; font-size: 20px;"></bookmark>
       <nuxt-link :to="post._path">
         <p>
           <i style="color: red;" class="fab fa-youtube" v-if="post.youtubeUrl"></i>

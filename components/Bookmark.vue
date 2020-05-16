@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-on:click="toggleBookmark()" style="font-size: 20px;">
+    <div v-on:click="toggleBookmark()" style="cursor: pointer;">
       <span v-if="isBookmarked"><i class="fas fa-bookmark"></i></span>
       <span v-else><i class="far fa-bookmark"></i></span>
     </div>

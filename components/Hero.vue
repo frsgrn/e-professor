@@ -11,23 +11,31 @@
             <h4 style="margin: 0px;">Ossi Pesämaa</h4>
             <p>
               <span class="toggleIcon">
-                <span v-if="!toggled">
-                  <i class="fas fa-stream"></i>
+                <span v-if="!toggled" class="bold-link">
+                  (Show more)
                 </span>
-                <span v-else>
-                  <i class="far fa-window-close"></i>
+                <span v-else class="bold-link">
+                  (Show less)
                 </span>
-              </span> Associate professor at Luleå University of Technology in Sweden
+              </span>
+              Associate professor at Luleå University of Technology in Sweden
             </p>
           </div>
         </div>
         <div :hidden="!toggled">
-          <p class="contact-information"><span><i class="fas fa-mobile-alt"></i> +49703248747</span> <span><i class="far fa-envelope"></i> email@example.com</span></p>
-        <div
-          class="more-information"
-          v-if="this.$store.state.siteInfo.about"
-          v-html="$md.render(this.$store.state.siteInfo.about)"
-        ></div>
+          <p class="contact-information">
+            <span>
+              <i class="fas fa-mobile-alt"></i> +49703248747
+            </span>
+            <span>
+              <i class="far fa-envelope"></i> email@example.com
+            </span>
+          </p>
+          <div
+            class="more-information"
+            v-if="this.$store.state.siteInfo.about"
+            v-html="$md.render(this.$store.state.siteInfo.about)"
+          ></div>
         </div>
       </div>
     </div>
@@ -49,7 +57,7 @@ export default {
 };
 </script>
 <style>
-.contact-information span{
+.contact-information span {
   margin-right: 20px;
   white-space: nowrap;
 }

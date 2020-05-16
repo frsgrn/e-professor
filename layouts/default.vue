@@ -71,6 +71,12 @@ p a {
   margin-bottom: 30px;
 }
 
+.bold-link {
+  border-bottom: 2px solid black;
+  display: inline;
+  font-weight: bold;
+}
+
 #subject-menu {
   padding: 0;
   list-style-type: none;
