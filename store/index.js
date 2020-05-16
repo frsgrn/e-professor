@@ -7,6 +7,7 @@ export const state = () => ({
   allPages: [],
   siteInfo: [],
   subjects: [],
+  sessionStorage: {bookmarks: []},
   globals: {},
 });
 
@@ -27,6 +28,9 @@ export const getters = {
   },
   getPostFromSlug: (state) => (slug) => {
     return state.blogPosts.find(post => post._slug == slug)
+  },
+  getBookmarks: (state) => () => {
+    return state.sessionStorage.bookmarks
   }
 };
 
@@ -42,6 +46,15 @@ export const mutations = {
   },
   SET_SUBJECTS(state, data) {
     state.subjects = data
+  },
+  ADD_BOOKMARK(state, data) {
+    state.sessionStorage.bookmarks.push(data)
+  },
+  REMOVE_BOOKMARK(state, data) {
+    //let matchingBookmark = state.sessionStorage.bookmarks.filter(b_post => data._slug == b_post._slug)[0]
+    /*if(!matchingBookmark) return
+    state.sessionStorage.bookmarks.splice(state.sessionStorage.bookmarks.indexOf(matchingBookmark))*/
+    state.sessionStorage.bookmarks = state.sessionStorage.bookmarks.filter(b_post => data._slug != b_post._slug)
   }
 };
 

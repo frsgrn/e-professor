@@ -24,6 +24,10 @@
         </b-col>
       </b-row>
     </div>
+    <div class="section" v-if="bookmarks.length > 0">
+      <h4>Your bookmarks</h4>
+      <article-preview v-for="post in bookmarks" :key="post._slug" :post="post"></article-preview>
+    </div>
   </div>
 </template>
 <script>
@@ -47,6 +51,9 @@ export default {
     },
     subjects() {
       return this.$store.state.subjects;
+    },
+    bookmarks() {
+      return this.$store.getters.getBookmarks()
     }
   }
 };

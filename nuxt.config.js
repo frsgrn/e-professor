@@ -41,6 +41,7 @@ export default {
   ],
 
   plugins: [
+    //{ src: '~/plugins/vuex-persist', ssr: false }
   ],
 
   modules: [
@@ -48,7 +49,8 @@ export default {
     '@nuxtjs/axios', // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/pwa',
     'bootstrap-vue/nuxt',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'nuxt-vuex-localstorage'
   ],
   markdownit: {
     injected: true,
@@ -76,7 +78,7 @@ export default {
       if (ctx.isDev) {
         config.devtool = ctx.isClient ? 'source-map' : 'inline-source-map'
       }
-    },
+    }
   },
   generate: {
     fallback: false,
