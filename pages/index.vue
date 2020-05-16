@@ -26,7 +26,11 @@
     </div>
     <div class="section" v-if="bookmarks.length > 0">
       <h4>Your bookmarks</h4>
-      <article-preview v-for="post in bookmarks" :key="post._slug" :post="post"></article-preview>
+      <b-row>
+        <b-col v-for="post in bookmarks" :key="post._slug" cols="12" md="6">
+          <article-preview :post="post"></article-preview>
+        </b-col>
+      </b-row>
     </div>
   </div>
 </template>
