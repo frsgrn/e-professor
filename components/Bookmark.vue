@@ -18,14 +18,14 @@ export default {
           }
           else {
               this.$store.commit('ADD_BOOKMARK', this.post)
-              this.makeToast(true, "Post saved", this.post.title + " was bookmarked.")
+              this.makeToast(false, "Post saved", this.post.title + " was bookmarked.")
           }
       },
       makeToast(append = false, title, body) {
         this.toastCount++
         this.$bvToast.toast(`${body}`, {
           title,
-          autoHideDelay: 5000,
+          autoHideDelay: 1500,
           appendToast: append
         })
       }
