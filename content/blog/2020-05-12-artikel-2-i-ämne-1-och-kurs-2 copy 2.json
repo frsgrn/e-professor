@@ -1,0 +1,11 @@
+{
+  "date": "12th May 2020",
+  "title": "Artikel 3 i ämne 1 och kurs 2",
+  "subheading": "Ojdå undertitel.",
+  "subject": [
+    "ämne-1",
+    "kurs-2"
+  ],
+  "author": "Victor Forsgren",
+  "body": "Innehåll som vanligt.\n\n# Med titel\n\nVilken fin titel."
+}
