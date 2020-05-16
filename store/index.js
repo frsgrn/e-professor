@@ -51,9 +51,6 @@ export const mutations = {
     state.sessionStorage.bookmarks.push(data)
   },
   REMOVE_BOOKMARK(state, data) {
-    //let matchingBookmark = state.sessionStorage.bookmarks.filter(b_post => data._slug == b_post._slug)[0]
-    /*if(!matchingBookmark) return
-    state.sessionStorage.bookmarks.splice(state.sessionStorage.bookmarks.indexOf(matchingBookmark))*/
     state.sessionStorage.bookmarks = state.sessionStorage.bookmarks.filter(b_post => data._slug != b_post._slug)
   }
 };

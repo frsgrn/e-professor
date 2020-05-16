@@ -1,5 +1,5 @@
 {
-  "name": "blogg-tempalte",
+  "name": "e-professor",
   "version": "0.1.0",
   "description": "Blogger based on Nuxt and Netlify CMS",
   "author": "Victor Forsgren",
@@ -23,7 +23,6 @@
     "lodash": ">=4.17.13",
     "lodash.template": ">=4.5.0",
     "nuxt": "^2.12.2",
-    "nuxt-vuex-localstorage": "^1.2.6",
     "vue-social-sharing": "^2.4.7",
     "vuex-persist": "^2.2.0"
   },

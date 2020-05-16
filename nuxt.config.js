@@ -41,7 +41,7 @@ export default {
   ],
 
   plugins: [
-    //{ src: '~/plugins/vuex-persist', ssr: false }
+    { src: '~/plugins/vuex-persist', ssr: false }
   ],
 
   modules: [
@@ -50,7 +50,7 @@ export default {
     '@nuxtjs/pwa',
     'bootstrap-vue/nuxt',
     '@nuxtjs/dotenv',
-    'nuxt-vuex-localstorage'
+    //'nuxt-vuex-localstorage'
   ],
   markdownit: {
     injected: true,
