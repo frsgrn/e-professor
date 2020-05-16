@@ -12,7 +12,7 @@
             <p>
               <span class="toggleIcon">
                 <span v-if="!toggled">
-                  <i class="far fa-window-maximize"></i>
+                  <i class="fas fa-stream"></i>
                 </span>
                 <span v-else>
                   <i class="far fa-window-close"></i>
