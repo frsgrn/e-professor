@@ -9,26 +9,30 @@
 </template>
 
 <script>
-
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default {
   components: {
     Navbar,
-    'EPFooter': Footer
+    EPFooter: Footer
   }
-}
+};
 </script>
 
 <style>
-
 .e-p-content {
-  min-height: calc(100vh - 87px);
+  /* change calc() when footer height changes */
+  min-height: calc(100vh - 228px);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Jost', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Jost", sans-serif;
   font-weight: normal;
 }
 
@@ -38,7 +42,7 @@ p {
 }
 
 body {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   background-color: #f3f5f7;
   word-wrap: break-word;
   height: 100%;
@@ -60,7 +64,7 @@ p a:hover {
 }
 
 p a {
-  color: #0D4EFF;
+  color: #0d4eff;
 }
 
 .section {
@@ -85,9 +89,8 @@ p a {
   margin: 0px 0px 10px 0px;
   padding: 20px;
   background-color: white;
-  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.03);
   border-radius: 5px;
-
 
   overflow: hidden;
 }
@@ -113,7 +116,7 @@ p a {
   margin-bottom: 20px;
   padding-top: 35px;
   text-align: center;
-  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.03);
   margin: auto;
   padding: 25px;
 }
@@ -132,7 +135,7 @@ p a {
   margin: 0px 0px 10px 0px;
   padding: 20px;
   background-color: white;
-  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.03);
   border-radius: 5px;
 }
 

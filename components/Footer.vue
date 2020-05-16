@@ -1,29 +1,40 @@
 <template>
-    <div class="footer">
-      <b-container>
-        <ul>
-          <li>{{this.$store.state.siteInfo.sitename}} {{new Date().getFullYear()}} - <span class="text-muted">{{this.$store.state.siteInfo.sitedescription}}</span></li>
-          <li><a href="https://se.linkedin.com/"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-          <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i> Facebook</a></li>
-          <li><a href="/admin"><i class="fas fa-align-left"></i> Admin</a></li>
-        </ul>
-      </b-container>
-    </div>
+  <div class="footer">
+    <b-container>
+      <ul>
+        <li>
+          {{this.$store.state.siteInfo.sitename}} {{new Date().getFullYear()}} -
+          <span class="text-muted">{{this.$store.state.siteInfo.sitedescription}}</span>
+        </li>
+        <li>
+          <a href="https://se.linkedin.com/">
+            <i class="fa fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/">
+            <i class="fa fa-facebook"></i> Facebook
+          </a>
+        </li>
+        <li>
+          <a href="/admin">
+            <i class="fas fa-align-left"></i> Admin
+          </a>
+        </li>
+      </ul>
+    </b-container>
+  </div>
 </template>
 
 <script>
-
-  export default {
-    data() {
-      return {
-      };
-    },
-  };
-
+export default {
+  data() {
+    return {};
+  }
+};
 </script>
 
 <style>
-
 .footer {
   background-color: #eee;
   padding: 30px;
@@ -47,5 +58,4 @@
 .footer ul li a {
   white-space: nowrap;
 }
-
 </style>
