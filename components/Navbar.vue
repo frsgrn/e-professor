@@ -53,8 +53,8 @@ export default {
   color: black;
   background-color: #f9f9f9;
   box-shadow: none;
+  transition: min-width .35s ease;
 }
-
 #search-icon {
   background-color: #f1f3f2;
   border: solid 2px gray;
@@ -64,6 +64,9 @@ export default {
 
 .navbar .search-field:focus {
   box-shadow: none;
+  border-left-width: 1px;
+  margin-left: 1px;
+  min-width: 180px;
 }
 
 .navbar #search-icon:focus {

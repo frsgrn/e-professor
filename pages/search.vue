@@ -1,7 +1,8 @@
 <template lang="html">
   <b-container>
     <navigation-bar :routes="[{name: 'search'}]"></navigation-bar>
-    <article-preview-list :posts="results.map(x => x.item)" :title="titleMessage"></article-preview-list>
+    <article-preview-list v-if="results.length > 0" :posts="results.map(x => x.item)" :title="titleMessage"></article-preview-list>
+    <article-preview-list v-else :posts="lastBlogs" :title="titleMessage" description="Showing most recent articles instead."></article-preview-list>
   </b-container>
 </template>
 
@@ -19,6 +20,9 @@ export default {
     NavigationBar
   },
   computed: {
+    lastBlogs() {
+      return this.$store.getters.lastBlogs(3);
+    },
     results() {
       const options = {
         includeScore: true,
