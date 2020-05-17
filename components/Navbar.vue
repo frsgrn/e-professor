@@ -2,7 +2,9 @@
   <b-navbar toggleable="lg" type="light">
     <div class="container">
       <nuxt-link to="/">
-        <b-navbar-brand>{{siteInfo.sitename}}</b-navbar-brand>
+        <b-navbar-brand>
+          <img src="/icon.png" style="width: 29px; height: 29px;" class="d-sm-inline d-md-none"> <span class="d-none d-md-inline">{{siteInfo.sitename}}</span>
+          </b-navbar-brand>
       </nuxt-link>
       <b-nav-form v-on:submit.prevent="submit()">
         <b-input-group size="sm">
@@ -45,7 +47,6 @@ export default {
 .navbar {
   border-bottom: 0px solid #eee;
   margin-bottom: 30px;
-  background-color: #f1f3f2;
 }
 
 .navbar .search-field {
