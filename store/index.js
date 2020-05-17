@@ -15,7 +15,9 @@ export const getters = {
   getPostsFromSubjectSlug: (state) => (subjectSlug) => {
     if (subjectSlug) {
       return state.blogPosts.filter(s => {
-        return s.subject.includes(subjectSlug)
+        console.log(s)
+        if(s.subject) return s.subject.includes(subjectSlug)
+        else return false
       });
     }
     return [];
