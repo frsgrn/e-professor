@@ -6,7 +6,7 @@
           <img src="/icon.png" style="width: 29px; height: 29px;" class="d-sm-inline d-md-none"> <span class="d-none d-md-inline">{{siteInfo.sitename}}</span>
           </b-navbar-brand>
       </nuxt-link>
-      <b-nav-form v-on:submit.prevent="submit()">
+      <b-nav-form v-on:submit.prevent="submit()" class="search-area">
         <b-input-group size="sm">
           <b-input-group-prepend>
             <button class="btn" id="search-icon"><i class="fas fa-search"></i></button>
@@ -49,16 +49,19 @@ export default {
   margin-bottom: 30px;
 }
 
+.navbar .search-area {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.03);
+}
+
 .navbar .search-field {
-  border: solid 2px gray;
+  border: none;
   color: black;
-  background-color: #f9f9f9;
   box-shadow: none;
-  transition: min-width .35s ease;
+  width: 150px;
 }
 #search-icon {
-  background-color: #f1f3f2;
-  border: solid 2px gray;
+  background-color: #eee;
+  border: none;
   border-right: none;
   height: 31px;
 }
@@ -67,7 +70,8 @@ export default {
   box-shadow: none;
   border-left-width: 1px;
   margin-left: 1px;
-  min-width: 180px;
+  width: 149px;
+  padding-left: 7px;
 }
 
 .navbar #search-icon:focus {
