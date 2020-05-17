@@ -11,7 +11,7 @@
         <p style="font-size: 18px;">{{post.subheading}}</p>
         <div
           style="color: #00000090;"
-          v-html="$md.set({ html: true, breaks: false }).renderInline(post.body)"
+          v-html="((post.preview) ? post.preview : post.body)"
           class="body-preview"
         ></div>
         <p style="font-weight: bold; border-bottom: 2px solid black; display: inline;">Read more</p>

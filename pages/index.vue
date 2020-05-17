@@ -4,9 +4,9 @@
     <div class="section" v-if="history.length > 0">
       <h4>Continue reading</h4>
       <article-preview :post="history[0]"></article-preview>
-      <p style="text-align: center;" @click="$store.commit('CLEAR_HISTORY')">
-        <n-link to="/">
-          <i class="fas fa-trash-alt"></i> Clear history
+      <p style="text-align: center;">
+        <n-link to="/history">
+          <i class="fas fa-history"></i> Show entire history
         </n-link>
       </p>
     </div>
