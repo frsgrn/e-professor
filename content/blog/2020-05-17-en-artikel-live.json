@@ -1,0 +1,12 @@
+{
+  "date": "17th May 2020",
+  "title": "En artikel, live",
+  "subheading": "Undertitel",
+  "preview": "Detta är sälj-stycket som ses när man.",
+  "subject": [
+    "kurs-2",
+    "ämne-2"
+  ],
+  "author": "Victor Forsgren",
+  "body": "# Titel\n\nSkriva text."
+}
