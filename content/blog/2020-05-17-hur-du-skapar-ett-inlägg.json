@@ -1,0 +1,11 @@
+{
+  "date": "17th May 2020",
+  "title": "Hur du skapar ett inlägg.",
+  "subheading": "En guide.",
+  "preview": "Steg för steg med bilder och allt.",
+  "subject": [
+    "här-har-vi-en-samling"
+  ],
+  "author": "Victor Forsgren",
+  "body": "Börja med att skrolla längst ner på sidan och klicka på \"Admin\" för att ta dig till administreringsvyn. \n\n![](/images/uploads/anteckning-2020-05-17-152141.png)\n\nLogga in med dina inloggningsuppgifter.\n\n![](/images/uploads/anteckning-2020-05-17-152257.png)\n\nVälj \"Blog\" i menyn.\n\n![](/images/uploads/anteckning-2020-05-17-152401.png)\n\nTryck på \"New Blog\"\n\n![](/images/uploads/anteckning-2020-05-17-152422.png)\n\nHär kan du skriva artikelns innehåll, kom ihåg att \"Collections\" / samlingar skapas separat genom att trycka på \"Collections\" istället för Blog i steg 3.\n\n![](/images/uploads/anteckning-2020-05-17-152449.png)\n\nTryck sedan på \"Publish now\". Efter ungefär 50 sekunder då hemsidan har byggd om sig själv så kan du se resultatet direkt på sidan.\n\n![](/images/uploads/anteckning-2020-05-17-152522.png)"
+}
