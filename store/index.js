@@ -7,23 +7,22 @@ export const state = () => ({
   allPages: [],
   siteInfo: [],
   subjects: [],
-  sessionStorage: {bookmarks: [], history: []},
+  sessionStorage: {bookmarks: [], history: [], language: "english"},
   globals: {},
 });
 
 export const getters = {
-  getPostsFromSubjectSlug: (state) => (subjectSlug) => {
+  getPostsFromSubjectSlug: (state, getters) => (subjectSlug) => {
     if (subjectSlug) {
-      return state.blogPosts.filter(s => {
-        console.log(s)
+      return getters.getBlogPosts().filter(s => {
         if(s.subject) return s.subject.includes(subjectSlug)
         else return false
       });
     }
     return [];
   },
-  lastBlogs: (state) => (num) => {
-    return state.blogPosts.slice(0, num)
+  lastBlogs: (state, getters) => (num) => {
+    return getters.getBlogPosts().slice(0, num)
   },
   getSubjectFromSlug: (state) => (slug) => {
     return state.subjects.find(subject => subject._slug == slug)
@@ -33,6 +32,13 @@ export const getters = {
   },
   getBookmarks: (state) => () => {
     return state.sessionStorage.bookmarks
+  },
+  getBlogPosts: (state) => () => {
+    return state.blogPosts.filter(post => {
+      if (!post.language) return true
+      else if(post.language.includes(state.sessionStorage.language) || post.language == state.sessionStorage.language) return true
+      else return false
+    })
   }
 };
 
@@ -63,6 +69,9 @@ export const mutations = {
   },
   CLEAR_HISTORY(state, data) {
     state.sessionStorage.history = []
+  },
+  SET_LANGUAGE(state, data) {
+    state.sessionStorage.language = data
   }
 };
 

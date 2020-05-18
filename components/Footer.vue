@@ -4,7 +4,9 @@
       <ul>
         <li>
           {{this.$store.state.siteInfo.sitename}} {{new Date().getFullYear()}} -
-          <span class="text-muted">{{this.$store.state.siteInfo.sitedescription}}</span>
+          <span
+            class="text-muted"
+          >{{this.$store.state.siteInfo.sitedescription}}</span>
         </li>
         <li>
           <a href="https://se.linkedin.com/">
