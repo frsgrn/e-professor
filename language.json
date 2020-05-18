@@ -12,7 +12,9 @@
             "SEARCH_TITLE_NO_RESULTS": "Kunde inte hitta några artiklar som matchar",
             "SEARCH_TITLE": "Sökresultat för",
             "SEARCH_SHOW_RECENTS": "Visar senaste inläggen istället.",
-            "YOUR_BOOKMARKS": "Dina bokmärken"
+            "YOUR_BOOKMARKS": "Dina bokmärken",
+            "LANG_ENGLISH": "Engelska",
+            "LANG_SWEDISH": "Svenska"
         },
         "english": {
             "CONTINUE_READING": "Continue reading",
@@ -25,7 +27,9 @@
             "SEARCH_TITLE_NO_RESULTS": "Could not find anything matching query",
             "SEARCH_TITLE": "Search results for",
             "SEARCH_SHOW_RECENTS": "Showing most recent articles instead.",
-            "YOUR_BOOKMARKS": "Your bookmarks"
+            "YOUR_BOOKMARKS": "Your bookmarks",
+            "LANG_ENGLISH": "English",
+            "LANG_SWEDISH": "Swedish"
         }
     }
 }

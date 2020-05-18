@@ -6,7 +6,6 @@
           <img src="/icon.png" style="width: 29px; height: 29px;" class="d-sm-inline d-md-none"> <span class="d-none d-md-inline">{{siteInfo.sitename}}</span>
           </b-navbar-brand>
       </nuxt-link>
-      <language-selector></language-selector>
       <b-nav-form v-on:submit.prevent="submit()" class="search-area">
         <b-input-group size="sm">
           <b-input-group-prepend>
@@ -19,6 +18,7 @@
         ></b-form-input>
         </b-input-group>
       </b-nav-form>
+      <language-selector></language-selector>
     </div>
   </b-navbar>
 </template>

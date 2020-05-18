@@ -1,12 +1,19 @@
 <template>
   <div>
-      <b-dropdown :text="this.$store.state.sessionStorage.language" class="language-selector" variant="light">
-            <b-dropdown-item v-on:click="$store.commit('SET_LANGUAGE', 'english')">english</b-dropdown-item>
-            <b-dropdown-item v-on:click="$store.commit('SET_LANGUAGE', 'swedish')">swedish</b-dropdown-item>
+      <b-dropdown :text="languageFullname" class="language-selector" variant="light">
+            <b-dropdown-item v-on:click="$store.commit('SET_LANGUAGE', 'english')">{{this.$L("LANG_ENGLISH")}}</b-dropdown-item>
+            <b-dropdown-item v-on:click="$store.commit('SET_LANGUAGE', 'swedish')">{{this.$L("LANG_SWEDISH")}}</b-dropdown-item>
           </b-dropdown>
   </div>
 </template>
 <script>
+export default {
+  computed: {
+    languageFullname() {
+      return this.$L("LANG_" + this.$store.state.sessionStorage.language.toUpperCase())
+    }
+  }
+}
 </script>
 <style>
 .language-selector .btn {
@@ -17,6 +24,4 @@
 .language-selector :focus {
     box-shadow: none;
 }
-
-
 </style>
