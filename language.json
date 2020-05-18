@@ -5,12 +5,14 @@
         "swedish": {
             "CONTINUE_READING": "Fortsätt läsa",
             "LATEST_ARTICLES": "Senaste artiklarna",
-            "COLLECTIONS": "Samlingar"
+            "COLLECTIONS": "Samlingar",
+            "SEARCH_LABEL": "Sök på"
         },
         "english": {
             "CONTINUE_READING": "Continue reading",
             "LATEST_ARTICLES": "Latest articles",
-            "COLLECTIONS": "Collections"
+            "COLLECTIONS": "Collections",
+            "SEARCH_LABEL": "Search"
         }
     }
 }

@@ -14,7 +14,7 @@
           </b-input-group-prepend>
         <b-form-input
           class="search-field"
-          :placeholder="'Search ' + siteInfo.sitename"
+          :placeholder="label + ' ' + siteInfo.sitename"
           v-model="searchQuery"
         ></b-form-input>
         </b-input-group>
@@ -46,6 +46,9 @@ export default {
   computed: {
     siteInfo() {
       return this.$store.state.siteInfo;
+    },
+    label() {
+      return this.$L("SEARCH_LABEL")
     }
   }
 };
