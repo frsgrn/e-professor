@@ -7,6 +7,9 @@
             "COLLECTIONS": "Samlingar",
             "SEARCH_LABEL": "Sök på",
             "READ_MORE": "Läs mer",
+            "SHOW_MORE": "Visa mer",
+            "SHOW_LESS": "Visa mindre",
+            "SHOW_ALL_ARTICLES": "Visa alla artiklar",
             "ALL_ARTICLES_TITLE": "Alla artiklar",
             "ALL_ARTICLES_DESCRIPTION": "Hela samlingen av artiklar, sorterat i omvänd kronologisk ordning.",
             "SEARCH_TITLE_NO_RESULTS": "Kunde inte hitta några artiklar som matchar",
@@ -14,7 +17,10 @@
             "SEARCH_SHOW_RECENTS": "Visar senaste inläggen istället.",
             "YOUR_BOOKMARKS": "Dina bokmärken",
             "LANG_ENGLISH": "Engelska",
-            "LANG_SWEDISH": "Svenska"
+            "LANG_SWEDISH": "Svenska",
+            "SHOW_ENTIRE_HISTORY": "Visa hela historiken",
+            "HISTORY_TITLE": "Din historik",
+            "HISTORY_DESCRIPTION": "En lista på alla artiklar som du har besökt."
         },
         "english": {
             "CONTINUE_READING": "Continue reading",
@@ -22,6 +28,9 @@
             "COLLECTIONS": "Collections",
             "SEARCH_LABEL": "Search",
             "READ_MORE": "Read more",
+            "SHOW_MORE": "Show more",
+            "SHOW_LESS": "Show less",
+            "SHOW_ALL_ARTICLES": "Show all articles",
             "ALL_ARTICLES_TITLE": "All articles",
             "ALL_ARTICLES_DESCRIPTION": "The entire collection of articles, sorted in reverse chronological order.",
             "SEARCH_TITLE_NO_RESULTS": "Could not find anything matching query",
@@ -29,7 +38,10 @@
             "SEARCH_SHOW_RECENTS": "Showing most recent articles instead.",
             "YOUR_BOOKMARKS": "Your bookmarks",
             "LANG_ENGLISH": "English",
-            "LANG_SWEDISH": "Swedish"
+            "LANG_SWEDISH": "Swedish",
+            "SHOW_ENTIRE_HISTORY": "Show entire history",
+            "HISTORY_TITLE": "Your history",
+            "HISTORY_DESCRIPTION": "A list of the articles that you've visited."
         }
     }
 }

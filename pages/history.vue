@@ -1,7 +1,7 @@
 <template lang="html">
   <b-container>
     <navigation-bar :routes="[{name: 'history'}]"></navigation-bar>
-    <article-preview-list :posts="history" title="Your reading history" description="A list of the articles that you've read."></article-preview-list>
+    <article-preview-list :posts="history" :title="this.$L('HISTORY_TITLE')" :description="this.$L('HISTORY_DESCRIPTION')"></article-preview-list>
   </b-container>
 </template>
 

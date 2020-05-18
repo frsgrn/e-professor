@@ -12,10 +12,10 @@
             <p>
               <span class="toggleIcon">
                 <span v-if="!toggled" class="bold-link">
-                  (Show more)
+                  ({{this.$L("SHOW_MORE")}})
                 </span>
                 <span v-else class="bold-link">
-                  (Show less)
+                  ({{this.$L("SHOW_LESS")}})
                 </span>
               </span>
               Associate professor at Luleå University of Technology in Sweden

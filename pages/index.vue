@@ -6,7 +6,7 @@
       <article-preview :post="history[0]"></article-preview>
       <p style="text-align: center;">
         <n-link to="/history">
-          <i class="fas fa-history"></i> Show entire history
+          <i class="fas fa-history"></i> {{this.$L("SHOW_ENTIRE_HISTORY")}}
         </n-link>
       </p>
     </div>
@@ -15,7 +15,7 @@
       <article-preview v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
       <p style="text-align: center;">
         <nuxt-link to="/subject/all">
-          <i class="fas fa-stream"></i> Show all articles
+          <i class="fas fa-stream"></i> {{this.$L("SHOW_ALL_ARTICLES")}}
         </nuxt-link>
       </p>
     </div>
