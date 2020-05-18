@@ -9,5 +9,7 @@
   "youtubeUrl": "https://www.youtube.com/watch?v=8ZtInClXe1Q",
   "date": "17th May 2020",
   "title": "Hej Ossi, det här är ett exempel inlägg.",
-  "language": "swedish"
+  "language": [
+    "swedish"
+  ]
 }
