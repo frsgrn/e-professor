@@ -28,7 +28,7 @@ export default {
         includeScore: true,
         keys: ["title", "description", "body", "author", "subject", "date"]
       };
-      const fuse = new Fuse(this.$store.state.blogPosts, options);
+      const fuse = new Fuse(this.$store.getters.getBlogPosts(), options);
       return fuse.search(this.$route.query.q).sort((a, b) => (a.score > b.score ? 1 : -1));
     },
     titleMessage() {
