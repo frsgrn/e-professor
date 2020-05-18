@@ -14,7 +14,7 @@
           v-html="((post.preview) ? post.preview : post.body)"
           class="body-preview"
         ></div>
-        <p style="font-weight: bold; border-bottom: 2px solid black; display: inline;">Read more</p>
+        <p style="font-weight: bold; border-bottom: 2px solid black; display: inline;">{{this.$L("READ_MORE")}}</p>
       </nuxt-link>
     </div>
   </div>

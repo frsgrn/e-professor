@@ -1,18 +1,19 @@
 {
-    "default": "english",
     "fallback": "english",
     "messages": {
         "swedish": {
             "CONTINUE_READING": "Fortsätt läsa",
             "LATEST_ARTICLES": "Senaste artiklarna",
             "COLLECTIONS": "Samlingar",
-            "SEARCH_LABEL": "Sök på"
+            "SEARCH_LABEL": "Sök på",
+            "READ_MORE": "Läs mer"
         },
         "english": {
             "CONTINUE_READING": "Continue reading",
             "LATEST_ARTICLES": "Latest articles",
             "COLLECTIONS": "Collections",
-            "SEARCH_LABEL": "Search"
+            "SEARCH_LABEL": "Search",
+            "READ_MORE": "Read more"
         }
     }
 }
