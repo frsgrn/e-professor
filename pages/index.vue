@@ -2,7 +2,7 @@
   <div class="container">
     <hero :title="siteInfo.sitename" :subheadline="siteInfo.sitedescription"></hero>
     <div class="section" v-if="history.length > 0">
-      <h4>Continue reading</h4>
+      <h4>{{this.$L("CONTINUE_READING")}}</h4>
       <article-preview :post="history[0]"></article-preview>
       <p style="text-align: center;">
         <n-link to="/history">
@@ -11,7 +11,7 @@
       </p>
     </div>
     <div class="section">
-      <h4>Latest articles</h4>
+      <h4>{{this.$L("LATEST_ARTICLES")}}</h4>
       <article-preview v-for="post in lastBlogs" :key="post._slug" :post="post"></article-preview>
       <p style="text-align: center;">
         <nuxt-link to="/subject/all">
@@ -20,7 +20,7 @@
       </p>
     </div>
     <div class="section">
-      <h4>Collections</h4>
+      <h4>{{this.$L("COLLECTIONS")}}</h4>
       <b-row>
         <b-col v-for="subject in subjects" :key="subject.name" cols="12" md="6">
           <nuxt-link :to="subject._path">

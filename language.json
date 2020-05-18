@@ -1,0 +1,16 @@
+{
+    "default": "english",
+    "fallback": "english",
+    "messages": {
+        "swedish": {
+            "CONTINUE_READING": "Fortsätt läsa",
+            "LATEST_ARTICLES": "Senaste artiklarna",
+            "COLLECTIONS": "Samlingar"
+        },
+        "english": {
+            "CONTINUE_READING": "Continue reading",
+            "LATEST_ARTICLES": "Latest articles",
+            "COLLECTIONS": "Collections"
+        }
+    }
+}

@@ -41,7 +41,8 @@ export default {
   ],
 
   plugins: [
-    { src: '~/plugins/vuex-persist', ssr: false }
+    { src: '~/plugins/vuex-persist', ssr: false },
+    { src: '~/plugins/language'}
   ],
 
   modules: [
@@ -49,16 +50,13 @@ export default {
     '@nuxtjs/axios', // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/pwa',
     'bootstrap-vue/nuxt',
-    '@nuxtjs/dotenv',
-    //'nuxt-vuex-localstorage'
+    '@nuxtjs/dotenv'
   ],
   markdownit: {
     injected: true,
     preset: 'default',
     breaks: true,
     html: true
-
-
   },
   /*
   ** Axios module configuration
