@@ -1,12 +1,13 @@
 {
-  "date": "17th May 2020",
-  "title": "Hej Ossi, det här är ett exempel inlägg.",
+  "body": "Detta är huvud-delen. Var noga när du klistrar in din Youtube-länk att det ända som står bakom youtube.com/ är watch?v=blablablavieoidvla",
   "subheading": "Såhär ser en undertitel ut.",
   "preview": "Här har vi säljstycket, visas bara när man bläddrar bland artiklar. Du behöver inte ange något på det här fältet om du inte vill. Annars tar den bara text från huvud-delen.",
   "author": "Ossi Pesämaa",
-  "youtubeUrl": "https://www.youtube.com/watch?v=8ZtInClXe1Q",
-  "body": "Detta är huvud-delen. Var noga när du klistrar in din Youtube-länk att det ända som står bakom youtube.com/ är watch?v=blablablavieoidvla",
   "subject": [
     "här-har-vi-en-samling"
-  ]
+  ],
+  "youtubeUrl": "https://www.youtube.com/watch?v=8ZtInClXe1Q",
+  "date": "17th May 2020",
+  "title": "Hej Ossi, det här är ett exempel inlägg.",
+  "language": "swedish"
 }
