@@ -1,6 +1,8 @@
 <template>
   <div>
-      <b-dropdown :text="languageFullname" class="language-selector" variant="light">
+      <b-dropdown :text="languageFullname" class="language-selector" variant="light" dropleft>
+            <b-dropdown-text>{{this.$L("SELECT_LANGUAGE")}}</b-dropdown-text>
+            <b-dropdown-divider></b-dropdown-divider>
             <b-dropdown-item v-on:click="$store.commit('SET_LANGUAGE', 'english')">{{this.$L("LANG_ENGLISH")}}</b-dropdown-item>
             <b-dropdown-item v-on:click="$store.commit('SET_LANGUAGE', 'swedish')">{{this.$L("LANG_SWEDISH")}}</b-dropdown-item>
           </b-dropdown>

@@ -20,7 +20,8 @@
             "LANG_SWEDISH": "Svenska",
             "SHOW_ENTIRE_HISTORY": "Visa hela historiken",
             "HISTORY_TITLE": "Din historik",
-            "HISTORY_DESCRIPTION": "En lista på alla artiklar som du har besökt."
+            "HISTORY_DESCRIPTION": "En lista på alla artiklar som du har besökt.",
+            "SELECT_LANGUAGE": "Välj språk"
         },
         "english": {
             "CONTINUE_READING": "Continue reading",
@@ -41,7 +42,8 @@
             "LANG_SWEDISH": "Swedish",
             "SHOW_ENTIRE_HISTORY": "Show entire history",
             "HISTORY_TITLE": "Your history",
-            "HISTORY_DESCRIPTION": "A list of the articles that you've visited."
+            "HISTORY_DESCRIPTION": "A list of the articles that you've visited.",
+            "SELECT_LANGUAGE": "Select language"
         }
     }
 }
