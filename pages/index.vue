@@ -38,7 +38,7 @@
       </b-row>
     </div>
     <div class="section" v-if="bookmarks.length > 0">
-      <h4>Your bookmarks</h4>
+      <h4>{{this.$L("YOUR_BOOKMARKS")}}</h4>
       <b-row>
         <b-col v-for="post in bookmarks" :key="post._slug" cols="12" md="6">
           <article-preview :post="post"></article-preview>

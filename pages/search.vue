@@ -2,7 +2,7 @@
   <b-container>
     <navigation-bar :routes="[{name: 'search'}]"></navigation-bar>
     <article-preview-list v-if="results.length > 0" :posts="results.map(x => x.item)" :title="titleMessage"></article-preview-list>
-    <article-preview-list v-else :posts="lastBlogs" :title="titleMessage" description="Showing most recent articles instead."></article-preview-list>
+    <article-preview-list v-else :posts="lastBlogs" :title="titleMessage" :description="recentMessage"></article-preview-list>
   </b-container>
 </template>
 
@@ -32,8 +32,11 @@ export default {
       return fuse.search(this.$route.query.q).sort((a, b) => (a.score > b.score ? 1 : -1));
     },
     titleMessage() {
-      if (this.results.length > 0) return "Search results for \"" + this.$route.query.q + "\""
-      else return "Could not find anything matching query \"" + this.$route.query.q + "\""
+      if (this.results.length > 0) return this.$L("SEARCH_TITLE") + " \"" + this.$route.query.q + "\""
+      else return this.$L("SEARCH_TITLE_NO_RESULTS") + " \"" + this.$route.query.q + "\""
+    },
+    recentMessage() {
+      return this.$L('SEARCH_SHOW_RECENTS')
     }
   },
   watchQuery: true,
