@@ -7,7 +7,7 @@
       <div>
         <div class="header-hero">
           <h5 style="margin-bottom: 0px;">
-            <span style="font-weight: bold; margin-right: 15px;">{{this.$store.state.siteInfo.sitename}}</span> {{this.$store.state.siteInfo.sitedescription}}
+            <span style="font-weight: bold; margin-right: 15px;">{{this.$store.state.siteInfo.sitename}}</span> <i>{{this.$store.state.siteInfo.sitedescription  }}</i>
           </h5>
         </div>
         <div style="display: inline; cursor: pointer;" v-on:click="toggleMoreInformation()">
