@@ -5,18 +5,20 @@
       style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;"
     >
       <div>
+        <div class="header-hero">
+          <h5 style="margin-bottom: 0px;">
+            <span style="font-weight: bold;">e-professor</span>
+            <i class="fas fa-long-arrow-alt-right"></i> The World of Research Methods in Project Management
+          </h5>
+        </div>
         <div style="display: inline; cursor: pointer;" v-on:click="toggleMoreInformation()">
           <div class="profile" style="float: left;"></div>
           <div class="information">
             <h4 style="margin: 0px;">Ossi Pesämaa</h4>
             <p>
               <span class="toggleIcon">
-                <span v-if="!toggled" class="bold-link">
-                  ({{this.$L("SHOW_MORE")}})
-                </span>
-                <span v-else class="bold-link">
-                  ({{this.$L("SHOW_LESS")}})
-                </span>
+                <span v-if="!toggled" class="bold-link">({{this.$L("SHOW_MORE")}})</span>
+                <span v-else class="bold-link">({{this.$L("SHOW_LESS")}})</span>
               </span>
               Associate professor at Luleå University of Technology in Sweden
             </p>
@@ -57,6 +59,16 @@ export default {
 };
 </script>
 <style>
+.hero .header-hero {
+  width: 100%;
+  color: white;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  background-color: #151d1f;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2326393e' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
 .contact-information span {
   margin-right: 20px;
   white-space: nowrap;
