@@ -70,7 +70,7 @@ export default {
       return this.$store.state.sessionStorage.history
     },
     subjects() {
-      return this.$store.state.subjects;
+      return this.$store.state.subjects.filter(subject => this.$store.getters.getPostsFromSubjectSlug(subject._slug).length > 0);
     },
     bookmarks() {
       return this.$store.getters.getBookmarks();

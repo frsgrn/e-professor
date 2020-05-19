@@ -1,18 +1,21 @@
 <template>
   <div>
-      <b-dropdown :text="languageFullname" class="language-selector" variant="light" dropleft>
+      <b-dropdown :text="settings" class="language-selector" variant="light" dropleft>
             <b-dropdown-text><small>{{this.$L("SELECT_LANGUAGE")}}</small></b-dropdown-text>
-            <b-dropdown-divider></b-dropdown-divider>
             <b-dropdown-item v-on:click="$store.commit('SET_LANGUAGE', 'english')">{{this.$L("LANG_ENGLISH")}}</b-dropdown-item>
             <b-dropdown-item v-on:click="$store.commit('SET_LANGUAGE', 'swedish')">{{this.$L("LANG_SWEDISH")}}</b-dropdown-item>
+            <b-dropdown-divider></b-dropdown-divider>
+            <b-dropdown-text><small>{{this.$L("MISC")}}</small></b-dropdown-text>
+            <b-dropdown-item v-on:click="$store.commit('CLEAR_HISTORY')">{{this.$L("CLEAR_HISTORY")}}</b-dropdown-item>
+            <b-dropdown-item v-on:click="$store.commit('CLEAR_BOOKMARKS')">{{this.$L("CLEAR_BOOKMARKS")}}</b-dropdown-item>
           </b-dropdown>
   </div>
 </template>
 <script>
 export default {
   computed: {
-    languageFullname() {
-      return this.$L("LANG_" + this.$store.state.sessionStorage.language.toUpperCase())
+    settings() {
+      return this.$L("SETTINGS")
     }
   }
 }

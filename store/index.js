@@ -61,13 +61,16 @@ export const mutations = {
   REMOVE_BOOKMARK(state, data) {
     state.sessionStorage.bookmarks = state.sessionStorage.bookmarks.filter(b_post => data._slug != b_post._slug)
   },
+  CLEAR_BOOKMARKS(state) {
+    state.sessionStorage.bookmarks = []
+  },
   PUSH_HISTORY(state, data) {
     if(state.sessionStorage.history)
       state.sessionStorage.history = state.sessionStorage.history.filter(b_post => data._slug != b_post._slug)
     state.sessionStorage.history.unshift(data)
     console.log("Current history length:", state.sessionStorage.history)
   },
-  CLEAR_HISTORY(state, data) {
+  CLEAR_HISTORY(state) {
     state.sessionStorage.history = []
   },
   SET_LANGUAGE(state, data) {

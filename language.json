@@ -21,7 +21,11 @@
             "SHOW_ENTIRE_HISTORY": "Visa hela historiken",
             "HISTORY_TITLE": "Din historik",
             "HISTORY_DESCRIPTION": "En lista på alla artiklar som du har besökt.",
-            "SELECT_LANGUAGE": "Välj språk"
+            "SELECT_LANGUAGE": "Välj språk",
+            "SETTINGS": "Inställningar",
+            "MISC": "Övrigt",
+            "CLEAR_HISTORY": "Rensa historik",
+            "CLEAR_BOOKMARKS": "Rensa bokmärken"
         },
         "english": {
             "CONTINUE_READING": "Continue reading",
@@ -43,7 +47,11 @@
             "SHOW_ENTIRE_HISTORY": "Show entire history",
             "HISTORY_TITLE": "Your history",
             "HISTORY_DESCRIPTION": "A list of the articles that you've visited.",
-            "SELECT_LANGUAGE": "Select language"
+            "SELECT_LANGUAGE": "Select language",
+            "SETTINGS": "Options",
+            "MISC": "Misc",
+            "CLEAR_HISTORY": "Clear history",
+            "CLEAR_BOOKMARKS": "Clear bookmarks"
         }
     }
 }
