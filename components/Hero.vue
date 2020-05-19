@@ -6,9 +6,8 @@
     >
       <div>
         <div class="header-hero">
-          <h5 style="margin-bottom: 0px;">
-            <span style="font-weight: bold; margin-right: 15px;">{{this.$store.state.siteInfo.sitename}}</span> <i>{{this.$store.state.siteInfo.sitedescription  }}</i>
-          </h5>
+          <h4><b>{{this.$store.state.siteInfo.sitename}}</b></h4>
+          <h5 style="margin-bottom: 0px;"><i>{{this.$store.state.siteInfo.sitedescription  }}</i></h5>
         </div>
         <div style="display: inline; cursor: pointer;" v-on:click="toggleMoreInformation()">
           <div class="profile" style="float: left;"></div>
@@ -59,13 +58,14 @@ export default {
 </script>
 <style>
 .hero .header-hero {
-  width: 100%;
   color: white;
   padding: 30px;
   margin-bottom: 40px;
   border-radius: 15px;
   background-color: #151d1f;
   background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2326393e' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  border-bottom: 5px solid black;
+  text-align: center;
 }
 
 .contact-information span {
