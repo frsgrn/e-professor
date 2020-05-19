@@ -7,7 +7,7 @@ export const state = () => ({
   allPages: [],
   siteInfo: [],
   subjects: [],
-  sessionStorage: {bookmarks: [], history: [], language: "english"},
+  sessionStorage: {bookmarks: [], history: [], language: {lang: "english", changed: false}},
   globals: {},
 });
 
@@ -36,7 +36,7 @@ export const getters = {
   getBlogPosts: (state) => () => {
     return state.blogPosts.filter(post => {
       if (!post.language) return true
-      else if(post.language.includes(state.sessionStorage.language) || post.language == state.sessionStorage.language) return true
+      else if(post.language.includes(state.sessionStorage.language.lang) || post.language == state.sessionStorage.language.lang) return true
       else return false
     })
   }
@@ -74,7 +74,7 @@ export const mutations = {
     state.sessionStorage.history = []
   },
   SET_LANGUAGE(state, data) {
-    state.sessionStorage.language = data
+    state.sessionStorage.language = {lang: data.lang, changed: ((data.manual) ? true : state.sessionStorage.language.changed)}
   }
 };
 

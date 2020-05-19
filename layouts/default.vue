@@ -16,6 +16,11 @@ export default {
   components: {
     Navbar,
     EPFooter: Footer
+  },
+  mounted() {    
+    var userLang = navigator.language || navigator.userLanguage;
+    console.log("detected language: " + userLang)
+    if (userLang == "sv-SE") this.$store.commit('SET_LANGUAGE', {lang: "swedish"})
   }
 };
 </script>
