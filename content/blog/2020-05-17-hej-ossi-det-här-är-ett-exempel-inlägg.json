@@ -4,7 +4,8 @@
   "preview": "Här har vi säljstycket, visas bara när man bläddrar bland artiklar. Du behöver inte ange något på det här fältet om du inte vill. Annars tar den bara text från huvud-delen.",
   "author": "Ossi Pesämaa",
   "subject": [
-    "här-har-vi-en-samling"
+    "här-har-vi-en-samling",
+    "endast-svenska-artiklar"
   ],
   "youtubeUrl": "https://www.youtube.com/watch?v=8ZtInClXe1Q",
   "date": "17th May 2020",
