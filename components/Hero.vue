@@ -7,8 +7,7 @@
       <div>
         <div class="header-hero">
           <h5 style="margin-bottom: 0px;">
-            <span style="font-weight: bold;">e-professor</span>
-            <i class="fas fa-long-arrow-alt-right"></i> The World of Research Methods in Project Management
+            <span style="font-weight: bold; margin-right: 15px;">{{this.$store.state.siteInfo.sitename}}</span> {{this.$store.state.siteInfo.sitedescription}}
           </h5>
         </div>
         <div style="display: inline; cursor: pointer;" v-on:click="toggleMoreInformation()">
