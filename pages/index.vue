@@ -56,6 +56,14 @@ export default {
     ArticlePreview,
     Hero
   },
+  head() {
+    return {
+      title: this.siteInfo.sitename,
+      meta: [
+        { hid: 'description', name: 'description', content: this.siteInfo.sitedescription }
+      ]
+    }
+  },
   computed: {
     blogPosts() {
       return this.$store.state.blogPosts;

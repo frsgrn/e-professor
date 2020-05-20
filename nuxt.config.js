@@ -15,6 +15,9 @@ export default {
 
   head: {
     title: info.sitename,
+    htmlAttrs: {
+      lang: 'en-US',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1.0,user-scalable=0' },

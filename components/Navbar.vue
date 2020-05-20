@@ -18,17 +18,17 @@
         ></b-form-input>
         </b-input-group>
       </b-nav-form>
-      <language-selector></language-selector>
+      <settings></settings>
     </div>
   </b-navbar>
 </template>
 <script>
 
-import LanguageSelector from "~/components/LanguageSelector.vue";
+import Settings from "~/components/Settings.vue";
 
 export default {
   components: {
-    LanguageSelector
+    Settings
   },
   data() {
     return {
@@ -61,6 +61,8 @@ export default {
 
 .navbar .search-area {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.03);
+  border: 2px solid lightslategray;
+  border-radius: 5px;
 }
 
 .navbar .search-field {

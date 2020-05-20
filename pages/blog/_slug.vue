@@ -15,6 +15,14 @@ export default {
   components: {
     ArticleView, NavigationBar
   },
+  head() {
+    return {
+      title: this.post.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.post.subheading }
+      ]
+    }
+  },
   async asyncData({ params, app, payload, route, store, error }) {
     try {
     let post = store.getters.getPostFromSlug(params.slug)
