@@ -40,9 +40,11 @@ export default {
     }
   },
   watchQuery: true,
-  async asyncData({ params, app, payload, route, store, error, query }) {
+  async asyncData({ params, app, payload, route, store, error, query, redirect }) {
+    console.log(route)
+    console.log(query)
     if (!query.q) {
-      return error({ statusCode: 404, message: "No query" });
+      return redirect("/");
     }
   }
 };
