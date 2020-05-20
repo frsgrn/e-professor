@@ -6,7 +6,7 @@
           <bookmark :post="post" style="display: inline-block; font-size: 35px;"></bookmark>
           {{post.title}}
         </h1>
-        <h2 style="color: #303030;">{{post.subheading}}</h2>
+        <h2 class="muted-dark">{{post.subheading}}</h2>
         <div v-if="post.youtubeUrl && post.youtubeUrl != ''">
           <b-row class="section">
             <b-col cols="12" style="text-align: center; margin: auto;">

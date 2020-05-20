@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 export default {
   components: {
     Navbar,
-    EPFooter: Footer
+    EPFooter: Footer,
   },
   mounted() {    
     var userLang = navigator.language || navigator.userLanguage;
@@ -26,6 +26,12 @@ export default {
 </script>
 
 <style>
+
+body { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  body { font-family: 'Inter var', sans-serif; }
+}
+
 .e-p-content {
   /* change calc() when footer height changes */
   min-height: calc(100vh - 228px);
@@ -37,7 +43,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Jost", sans-serif;
   font-weight: normal;
 }
 
@@ -47,7 +52,6 @@ p {
 }
 
 body {
-  font-family: "Jost", sans-serif;
   background-color: #f3f5f7;
   word-wrap: break-word;
   height: 100%;
@@ -80,11 +84,6 @@ p a {
   border-bottom: 2px solid black;
   display: inline;
   font-weight: bold;
-}
-
-#subject-menu {
-  padding: 0;
-  list-style-type: none;
 }
 
 .article {
@@ -162,5 +161,21 @@ p a {
 
 .body img {
   width: 100%;
+}
+
+.muted-dark {
+  color: #303030;
+}
+
+.muted-light {
+  color: #00000090;
+}
+
+.semi-bold, b {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
 }
 </style>

@@ -28,6 +28,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;1,400;1,600&display=swap' },
+      { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }
     ],
     script: [
       {

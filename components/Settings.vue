@@ -1,6 +1,12 @@
 <template>
   <div>
-      <b-dropdown :text="settings" class="language-selector" variant="light" dropleft>
+      <b-dropdown class="language-selector" variant="light" dropleft no-caret="">
+        <template slot="button-content">
+        <i class="fas fa-sort-down"></i>
+        <i class="fas fa-wrench"></i>
+    </template>
+    <b-dropdown-text><small>{{this.$L("SETTINGS")}}</small></b-dropdown-text>
+    <b-dropdown-divider></b-dropdown-divider>
             <b-dropdown-text><small>{{this.$L("SELECT_LANGUAGE")}}</small></b-dropdown-text>
             <b-dropdown-item v-on:click="$store.commit('SET_LANGUAGE', {lang: 'english', manual: true})">{{this.$L("LANG_ENGLISH")}}</b-dropdown-item>
             <b-dropdown-item v-on:click="$store.commit('SET_LANGUAGE', {lang: 'swedish', manual: true})">{{this.$L("LANG_SWEDISH")}}</b-dropdown-item>

@@ -10,9 +10,8 @@
         </p>
         <p style="font-size: 18px;">{{post.subheading}}</p>
         <div
-          style="color: #00000090;"
           v-html="((post.preview) ? post.preview : post.body)"
-          class="body-preview"
+          class="body-preview muted-light"
         ></div>
         <p style="font-weight: bold; border-bottom: 2px solid black; display: inline;">{{this.$L("READ_MORE")}}</p>
       </nuxt-link>

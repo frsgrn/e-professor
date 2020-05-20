@@ -6,6 +6,8 @@
           <img src="/icon.png" style="width: 29px; height: 29px;" class="d-sm-inline d-md-none"> <span class="d-none d-md-inline">{{siteInfo.sitename}}</span>
           </b-navbar-brand>
       </nuxt-link>
+      <b-navbar-nav class="ml-auto">
+      <settings style="border-right: 2px solid gray; margin-right: 13px;"></settings>
       <b-nav-form v-on:submit.prevent="submit()" class="search-area">
         <b-input-group size="sm">
           <b-input-group-prepend>
@@ -18,7 +20,7 @@
         ></b-form-input>
         </b-input-group>
       </b-nav-form>
-      <settings></settings>
+      </b-navbar-nav>
     </div>
   </b-navbar>
 </template>
