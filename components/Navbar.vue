@@ -3,11 +3,11 @@
     <div class="container">
       <nuxt-link to="/">
         <b-navbar-brand>
-          <img src="/icon.png" style="width: 29px; height: 29px;" class="d-sm-inline d-md-none"> <span class="d-none d-md-inline">{{siteInfo.sitename}}</span>
+          <img src="/icon.png" style="width: 29px; height: 29px;" class="d-sm-inline d-md-none"> <span class="d-none d-md-inline" style="font-weight: 500; letter-spacing: -0.5px;">{{siteInfo.sitename}}</span>
           </b-navbar-brand>
       </nuxt-link>
+            <settings></settings>
       <b-navbar-nav class="ml-auto">
-      <settings style="border-right: 2px solid gray; margin-right: 13px;"></settings>
       <b-nav-form v-on:submit.prevent="submit()" class="search-area">
         <b-input-group size="sm">
           <b-input-group-prepend>
@@ -58,6 +58,7 @@ export default {
 <style>
 .navbar {
   border-bottom: 0px solid #eee;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
