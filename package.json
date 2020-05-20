@@ -1,7 +1,7 @@
 {
   "name": "e-professor",
   "version": "0.1.0",
-  "description": "Blogger based on Nuxt and Netlify CMS",
+  "description": "The World of Research Methods in Project Management.",
   "author": "Victor Forsgren",
   "private": true,
   "scripts": {
