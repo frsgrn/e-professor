@@ -15,8 +15,8 @@
             <h4 style="margin: 0px;">Ossi Pesämaa</h4>
             <p>
               <span class="toggleIcon">
-                <span v-if="!toggled" class="bold-link">({{this.$L("SHOW_MORE")}})</span>
-                <span v-else class="bold-link">({{this.$L("SHOW_LESS")}})</span>
+                <span v-if="!toggled"><i class="fas fa-caret-down"></i></span>
+                <span v-else><i class="fas fa-caret-up"></i></span>
               </span>
               Associate professor at Luleå University of Technology in Sweden
             </p>
