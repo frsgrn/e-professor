@@ -1,6 +1,6 @@
 <template lang="html">
 <b-container>
-    <navigation-bar :routes="[{name: 'articles'}, {name: 'all', url: '/subject/all'}, {name: post.title}]"></navigation-bar>
+    <navigation-bar :routes="[{name: 'articles', url: '/subject/all'}, {name: post.title}]"></navigation-bar>
     <div class="section">
   <article-view :post="post"></article-view>
   </div>
