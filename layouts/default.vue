@@ -26,15 +26,13 @@ export default {
 </script>
 
 <style>
-
-body { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  body { font-family: 'Inter var', sans-serif; }
-}
-
 .e-p-content {
   /* change calc() when footer height changes */
   min-height: calc(100vh - 228px);
+}
+
+body {
+  font-family: 'Jost', sans-serif;
 }
 
 h1,

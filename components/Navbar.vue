@@ -3,7 +3,7 @@
     <div class="container">
       <nuxt-link to="/">
         <b-navbar-brand style="font-family: jost">
-          <img src="/icon.png" style="width: 29px; height: 29px;" class="d-sm-inline d-md-none"> <span class="d-none d-md-inline" style="font-weight: 500;">{{siteInfo.sitename}}</span>
+          <img src="/icon.png" style="width: 29px; height: 29px; margin-bottom: 3px;" class="d-sm-inline d-md-none"> <span class="d-none d-md-inline">{{siteInfo.sitename}}</span>
           </b-navbar-brand>
       </nuxt-link>
             <settings></settings>
