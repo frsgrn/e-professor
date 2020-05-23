@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" type="light">
+  <b-navbar toggleable="lg" type="light" fixed="top" id="navbar">
     <div class="container">
       <nuxt-link to="/">
         <b-navbar-brand style="font-family: jost">
@@ -25,7 +25,6 @@
   </b-navbar>
 </template>
 <script>
-
 import Settings from "~/components/Settings.vue";
 
 export default {
@@ -45,6 +44,18 @@ export default {
       }
     }
   },
+  mounted() {
+    $(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    if (scroll != 0) {
+      $("#navbar").addClass("scroll-down")
+    }
+    else {
+      $("#navbar").removeClass("scroll-down")
+    }
+});
+
+  },
   computed: {
     siteInfo() {
       return this.$store.state.siteInfo;
@@ -57,15 +68,21 @@ export default {
 </script>
 <style>
 .navbar {
-  border-bottom: 0px solid #eee;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  background-color: #f3f5f7;
+  transition: padding 0.2s ease;
+  padding-top: 15px;
+  border: none;
 }
 
 .navbar .search-area {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.03);
   border: 2px solid lightslategray;
   border-radius: 5px;
+}
+
+.scroll-down {
+  border-bottom: 2px solid #eee;
+  padding-top: 8px;
 }
 
 .navbar .search-field {

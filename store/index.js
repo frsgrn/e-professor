@@ -68,7 +68,6 @@ export const mutations = {
     if(state.sessionStorage.history)
       state.sessionStorage.history = state.sessionStorage.history.filter(b_post => data._slug != b_post._slug)
     state.sessionStorage.history.unshift(data)
-    console.log("Current history length:", state.sessionStorage.history)
   },
   CLEAR_HISTORY(state) {
     state.sessionStorage.history = []

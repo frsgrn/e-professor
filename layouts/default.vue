@@ -31,10 +31,6 @@ export default {
   min-height: calc(100vh - 228px);
 }
 
-body {
-  font-family: 'Jost', sans-serif;
-}
-
 h1,
 h2,
 h3,
@@ -50,9 +46,11 @@ p {
 }
 
 body {
+  font-family: 'Jost', sans-serif;
   background-color: #f3f5f7;
   word-wrap: break-word;
   height: 100%;
+  padding-top: 100px;
 }
 
 a {

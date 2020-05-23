@@ -33,6 +33,10 @@ export default {
       {
         src: "https://kit.fontawesome.com/244be9cb46.js",
         type: "text/javascript"
+      },
+      {
+        src: "https://code.jquery.com/jquery-3.5.1.slim.min.js",
+        type: "text/javascript"
       }
     ]
   },
