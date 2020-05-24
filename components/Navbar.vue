@@ -2,24 +2,39 @@
   <b-navbar toggleable="lg" type="light" fixed="top" id="navbar">
     <div class="container">
       <nuxt-link to="/">
-        <b-navbar-brand style="font-family: jost">
-          <img src="/icon.png" style="width: 29px; height: 29px; margin-bottom: 3px;" class="d-sm-inline d-md-none"> <span class="d-none d-md-inline">{{siteInfo.sitename}}</span>
-          </b-navbar-brand>
+      <b-navbar-brand style="font-family: jost">
+      <div v-if="!scrollDown">
+          <img
+            src="/icon.png"
+            style="width: 29px; height: 29px; margin-bottom: 3px;"
+            class="d-sm-inline d-md-none"
+          />
+          <span class="d-none d-md-inline">{{siteInfo.sitename}}</span>
+      </div>
+      <div v-else>
+        <img
+            src="/icon.png"
+            style="width: 29px; height: 29px; margin-bottom: 3px;"
+          />
+      </div>
+      </b-navbar-brand>
       </nuxt-link>
-            <settings></settings>
+      <settings></settings>
       <b-navbar-nav class="ml-auto">
-      <b-nav-form v-on:submit.prevent="submit()" class="search-area">
-        <b-input-group size="sm">
-          <b-input-group-prepend>
-            <button class="btn" id="search-icon"><i class="fas fa-search"></i></button>
-          </b-input-group-prepend>
-        <b-form-input
-          class="search-field"
-          :placeholder="label + ' ' + siteInfo.sitename"
-          v-model="searchQuery"
-        ></b-form-input>
-        </b-input-group>
-      </b-nav-form>
+        <b-nav-form v-on:submit.prevent="submit()" class="search-area">
+          <b-input-group size="sm">
+            <b-input-group-prepend>
+              <button class="btn" id="search-icon">
+                <i class="fas fa-search"></i>
+              </button>
+            </b-input-group-prepend>
+            <b-form-input
+              class="search-field"
+              :placeholder="label + ' ' + siteInfo.sitename"
+              v-model="searchQuery"
+            ></b-form-input>
+          </b-input-group>
+        </b-nav-form>
       </b-navbar-nav>
     </div>
   </b-navbar>
@@ -33,7 +48,8 @@ export default {
   },
   data() {
     return {
-      searchQuery: ""
+      searchQuery: "",
+      scrollDown: false
     };
   },
   methods: {
@@ -45,23 +61,24 @@ export default {
     }
   },
   mounted() {
-    $(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    if (scroll != 0) {
-      $("#navbar").addClass("scroll-down")
-    }
-    else {
-      $("#navbar").removeClass("scroll-down")
-    }
-});
-
+    var context = this
+    $(window).scroll(function(event) {
+      var scroll = $(window).scrollTop();
+      if (scroll != 0) {
+        $("#navbar").addClass("scroll-down");
+        context.scrollDown = true
+      } else {
+        $("#navbar").removeClass("scroll-down");
+        context.scrollDown = false
+      }
+    });
   },
   computed: {
     siteInfo() {
       return this.$store.state.siteInfo;
     },
     label() {
-      return this.$L("SEARCH_LABEL")
+      return this.$L("SEARCH_LABEL");
     }
   }
 };
