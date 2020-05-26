@@ -43,7 +43,6 @@ export default {
       return this.$L("SEARCH_SHOW_RECENTS");
     }
   },
-  watchQuery: true,
   async asyncData({
     query,
     redirect

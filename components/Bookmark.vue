@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-on:click="toggleBookmark()" style="cursor: pointer;">
+    <div v-on:click="toggleBookmark()" style="cursor: pointer;" class="bookmark">
       <span v-if="isBookmarked"><i class="fas fa-bookmark"></i></span>
       <span v-else><i class="far fa-bookmark"></i></span>
     </div>
@@ -40,6 +40,3 @@ export default {
   }
 };
 </script>
-<style>
-
-</style>
