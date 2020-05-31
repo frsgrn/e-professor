@@ -2,22 +2,19 @@
   <b-navbar toggleable="lg" type="light" fixed="top" id="navbar">
     <div class="container">
       <nuxt-link to="/">
-      <b-navbar-brand style="font-family: jost">
-      <div v-if="!scrollDown">
-          <img
-            src="/icon.png"
-            style="width: 29px; height: 29px; margin-bottom: 3px;"
-            class="d-sm-inline d-md-none"
-          />
-          <span class="d-none d-md-inline">{{siteInfo.sitename}}</span>
-      </div>
-      <div v-else>
-        <img
-            src="/icon.png"
-            style="width: 29px; height: 29px; margin-bottom: 3px;"
-          />
-      </div>
-      </b-navbar-brand>
+        <b-navbar-brand style="font-family: jost">
+          <div v-if="!scrollDown">
+            <img
+              src="/icon.png"
+              style="width: 29px; height: 29px; margin-bottom: 3px;"
+              class="d-sm-inline d-md-none"
+            />
+            <span class="d-none d-md-inline">{{siteInfo.sitename}}</span> <sup style="color: crimson;">beta</sup>
+          </div>
+          <div v-else>
+            <img src="/icon.png" style="width: 29px; height: 29px; margin-bottom: 3px;" />
+          </div>
+        </b-navbar-brand>
       </nuxt-link>
       <settings></settings>
       <b-navbar-nav class="ml-auto">
@@ -61,15 +58,15 @@ export default {
     }
   },
   mounted() {
-    var context = this
+    var context = this;
     $(window).scroll(function(event) {
       var scroll = $(window).scrollTop();
       if (scroll != 0) {
         $("#navbar").addClass("scroll-down");
-        context.scrollDown = true
+        context.scrollDown = true;
       } else {
         $("#navbar").removeClass("scroll-down");
-        context.scrollDown = false
+        context.scrollDown = false;
       }
     });
   },
