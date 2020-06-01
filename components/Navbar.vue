@@ -61,7 +61,7 @@ export default {
     var context = this;
     $(window).scroll(function(event) {
       var scroll = $(window).scrollTop();
-      if (scroll != 0) {
+      if (scroll > 0) {
         $("#navbar").addClass("scroll-down");
         context.scrollDown = true;
       } else {
