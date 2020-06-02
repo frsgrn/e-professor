@@ -9,7 +9,7 @@
               style="width: 29px; height: 29px; margin-bottom: 3px;"
               class="d-sm-inline d-md-none"
             />
-            <span class="d-none d-md-inline">{{siteInfo.sitename}} <sup style="color: crimson;">beta</sup></span>
+            <span class="d-none d-md-inline">{{siteInfo.sitename}} <sup style="color: crimson;">{{branchName}}</sup></span>
           </div>
           <div v-else>
             <img src="/icon.png" style="width: 29px; height: 29px; margin-bottom: 3px;" />
@@ -76,6 +76,10 @@ export default {
     },
     label() {
       return this.$L("SEARCH_LABEL");
+    },
+    branchName() {
+      if (process.env.BRANCH == "develop") return "develop"
+      else return "beta"
     }
   }
 };

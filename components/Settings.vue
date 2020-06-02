@@ -23,6 +23,7 @@
       </b-dropdown-text>
       <b-dropdown-item v-on:click="$store.commit('CLEAR_HISTORY')">{{this.$L("CLEAR_HISTORY")}}</b-dropdown-item>
       <b-dropdown-item v-on:click="$store.commit('CLEAR_BOOKMARKS')">{{this.$L("CLEAR_BOOKMARKS")}}</b-dropdown-item>
+      <b-dropdown-item v-on:click="toggleDev()">Växla utvecklingsläge</b-dropdown-item>
     </b-dropdown>
   </div>
 </template>
@@ -31,6 +32,20 @@ export default {
   computed: {
     settings() {
       return this.$L("SETTINGS");
+    }
+  },
+  methods: {
+    toggleDev() {
+      if (process.env.BRANCH != "develop") {
+        let date = new Date();
+        date.setTime(date.getTime()+(30*24*60*60*1000));
+        let expires = "; expires="+date.toGMTString();
+        window.cookie = "nf_ab=develop" + expires
+        }
+      else {
+        window.cookie = "nf_ab=;expires=Thu, 01 Jan 1970 00:00:01 GMT;"
+      }
+      window.location.reload(true)
     }
   }
 };
