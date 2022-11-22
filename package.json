@@ -22,7 +22,7 @@
     "fuse.js": "^5.2.3",
     "lodash": ">=4.17.13",
     "lodash.template": ">=4.5.0",
-    "nuxt": "^2.12.2",
+    "nuxt": "^2.15.8",
     "vue-social-sharing": "^2.4.7",
     "vuex-persist": "^2.2.0"
   },
